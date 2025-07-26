@@ -1,0 +1,19 @@
+/* Hero section specific styles */
+.hero-gradient {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.search-form {
+  backdrop-filter: blur(10px);
+}
+
+.search-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}

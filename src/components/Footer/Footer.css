@@ -1,0 +1,35 @@
+/* Footer specific styles */
+.footer-link:hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.app-download-btn {
+  background: #374151;
+  transition: background-color 0.3s ease;
+}
+
+.app-download-btn:hover {
+  background: #4b5563;
+}
+
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
