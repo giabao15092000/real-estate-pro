@@ -10,16 +10,59 @@ const PropertiesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [sortBy, setSortBy] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({
+    type: "buy",
+    category: "",
+    city: "",
+    district: "",
+    price: "",
+    area: "",
+  });
   const itemsPerPage = 12;
 
   useEffect(() => {
-    // Display featured properties first
-    displayFeaturedProperties();
-  }, []);
+    applyFilters();
+  }, [filters, sortBy]);
 
-  const displayFeaturedProperties = () => {
-    const featuredProps = properties.filter((p) => p.featured).slice(0, 8);
-    setFilteredProperties(featuredProps);
+  const applyFilters = () => {
+    let result = properties.filter((p) => p.type === filters.type);
+
+    if (filters.category) {
+      result = result.filter((p) => p.category === filters.category);
+    }
+    if (filters.city) {
+      result = result.filter((p) => p.location.includes(filters.city));
+    }
+    if (filters.district) {
+      result = result.filter((p) => p.location.includes(filters.district));
+    }
+    if (filters.price) {
+      const [min, max] = filters.price;
+      result = result.filter((p) => p.price >= min && p.price <= max);
+    }
+    if (filters.area) {
+      const [min, max] = filters.area;
+      result = result.filter((p) => p.area >= min && p.area <= max);
+    }
+
+    switch (sortBy) {
+      case "price-low":
+        result.sort((a, b) => a.price - b.price);
+        break;
+      case "price-high":
+        result.sort((a, b) => b.price - a.price);
+        break;
+      case "area":
+        result.sort((a, b) => b.area - a.area);
+        break;
+      case "newest":
+      default:
+        result.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+        break;
+    }
+
+    setFilteredProperties(result);
+    setCurrentPage(1);
   };
 
   const handlePropertyClick = (propertyId) => {
@@ -33,30 +76,14 @@ const PropertiesSection = () => {
     setSelectedProperty(null);
   };
 
-  const handleSort = (sortValue) => {
-    setSortBy(sortValue);
-    let sorted = [...filteredProperties];
-
-    switch (sortValue) {
-      case "price-low":
-        sorted.sort((a, b) => a.price - b.price);
-        break;
-      case "price-high":
-        sorted.sort((a, b) => b.price - a.price);
-        break;
-      case "area":
-        sorted.sort((a, b) => b.area - a.area);
-        break;
-      case "newest":
-      default:
-        sorted.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
-        break;
-    }
-
-    setFilteredProperties(sorted);
+  const handleFilterChange = (key, value) => {
+    setFilters((prev) => ({ ...prev, [key]: value }));
   };
 
-  // Pagination
+  const handleSort = (sortValue) => {
+    setSortBy(sortValue);
+  };
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedProperties = filteredProperties.slice(startIndex, endIndex);
@@ -68,7 +95,7 @@ const PropertiesSection = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-800">
+            <h3 className="text-3xl font-bold text-red-600 border-b-4 border-red-300 pb-2 hover:scale-105 transition-transform">
               Bất động sản nổi bật
             </h3>
             <a
@@ -94,22 +121,15 @@ const PropertiesSection = () => {
         </div>
       </section>
 
-      {/* Properties Listing */}
+      {/* Nhà đất bán */}
       <section id="properties" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
-          <div className="breadcrumb mb-6">
-            <div className="flex items-center text-sm text-gray-600">
-              <a href="#" className="hover:text-red-600">
-                Trang chủ
-              </a>
-              <i className="fas fa-chevron-right mx-2"></i>
-              <span>Nhà đất bán</span>
-            </div>
-          </div>
+          <div className="breadcrumb mb-6"></div>
 
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-3xl font-bold text-gray-800">Nhà đất bán</h3>
+            <h3 className="text-3xl font-bold text-green-600 border-b-4 border-green-300 pb-2 hover:scale-105 transition-transform">
+              Nhà đất bán
+            </h3>
             <div className="flex items-center space-x-4">
               <span className="text-gray-600">Sắp xếp:</span>
               <select
@@ -125,46 +145,8 @@ const PropertiesSection = () => {
             </div>
           </div>
 
-          {/* Sticky Filter Bar */}
-          <div className="sticky-search bg-white rounded-lg shadow-lg p-4 mb-6">
-            <div className="flex flex-wrap gap-4 items-center">
-              <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                <option>Loại BDS</option>
-                <option>Căn hộ</option>
-                <option>Nhà riêng</option>
-                <option>Biệt thự</option>
-              </select>
-              <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                <option>Tỉnh/Thành</option>
-                <option>TP.HCM</option>
-                <option>Hà Nội</option>
-                <option>Đà Nẵng</option>
-              </select>
-              <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                <option>Quận/Huyện</option>
-                <option>Quận 1</option>
-                <option>Quận 2</option>
-                <option>Quận 3</option>
-              </select>
-              <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                <option>Mức giá</option>
-                <option>Dưới 1 tỷ</option>
-                <option>1-3 tỷ</option>
-                <option>3-5 tỷ</option>
-              </select>
-              <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                <option>Diện tích</option>
-                <option>Dưới 50m²</option>
-                <option>50-100m²</option>
-                <option>Trên 100m²</option>
-              </select>
-              <button className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm">
-                Lọc kết quả
-              </button>
-            </div>
-          </div>
+          {/* Filters (đã có ở đây) */}
 
-          {/* Properties Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {paginatedProperties.map((property) => (
               <PropertyCard
@@ -212,7 +194,27 @@ const PropertiesSection = () => {
         </div>
       </section>
 
-      {/* Property Modal */}
+      {/* Nhà đất cho thuê */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-blue-600 border-b-4 border-blue-300 pb-2 mb-8 hover:scale-105 transition-transform">
+            Nhà đất cho thuê
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {properties
+              .filter((p) => p.type === "rent")
+              .slice(0, 8)
+              .map((property) => (
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                  onClick={handlePropertyClick}
+                />
+              ))}
+          </div>
+        </div>
+      </section>
+
       <PropertyModal
         property={selectedProperty}
         isOpen={isModalOpen}

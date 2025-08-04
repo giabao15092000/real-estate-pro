@@ -34,7 +34,7 @@ const Header = () => {
                   onClick={() => scrollToSection("home")}
                   className="text-gray-700 hover:text-red-600 transition-colors"
                 >
-                  Trang chủ
+                  Home
                 </button>
               </div>
               <div className="relative group">
@@ -42,20 +42,21 @@ const Header = () => {
                   onClick={() => scrollToSection("properties")}
                   className="text-gray-700 hover:text-red-600 transition-colors flex items-center"
                 >
-                  Nhà đất bán <i className="fas fa-chevron-down ml-1"></i>
+                  Properties for Sale{" "}
+                  <i className="fas fa-chevron-down ml-1"></i>
                 </button>
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Căn hộ chung cư
+                    Apartment
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Nhà riêng
+                    Private House
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Nhà biệt thự
+                    Villa
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Nhà mặt phố
+                    Shophouse
                   </a>
                 </div>
               </div>
@@ -64,20 +65,21 @@ const Header = () => {
                   href="#"
                   className="text-gray-700 hover:text-red-600 transition-colors flex items-center"
                 >
-                  Nhà đất cho thuê <i className="fas fa-chevron-down ml-1"></i>
+                  Properties for Rent{" "}
+                  <i className="fas fa-chevron-down ml-1"></i>
                 </a>
                 <div className="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Căn hộ cho thuê
+                    Apartment for Rent
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Nhà cho thuê
+                    House for Rent
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Văn phòng cho thuê
+                    Office for Rent
                   </a>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Cửa hàng cho thuê
+                    Store for Rent
                   </a>
                 </div>
               </div>
@@ -85,19 +87,19 @@ const Header = () => {
                 onClick={() => scrollToSection("news")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
-                Tin tức
+                News
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
-                Liên hệ
+                Contact
               </button>
             </nav>
 
             <div className="flex items-center space-x-4">
               <button className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
-                <i className="fas fa-plus mr-2"></i>Đăng tin
+                <i className="fas fa-plus mr-2"></i>Post Listing
               </button>
               <button
                 className="lg:hidden text-gray-700"
@@ -118,28 +120,28 @@ const Header = () => {
               onClick={() => scrollToSection("home")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
-              Trang chủ
+              Home
             </button>
             <button
               onClick={() => scrollToSection("properties")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
-              Nhà đất bán
+              Properties for Sale
             </button>
             <a href="#" className="block py-2 text-gray-700 hover:text-red-600">
-              Nhà đất cho thuê
+              Properties for Rent
             </a>
             <button
               onClick={() => scrollToSection("news")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
-              Tin tức
+              News
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
-              Liên hệ
+              Contact
             </button>
           </div>
         </div>

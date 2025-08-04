@@ -2,7 +2,7 @@ import React from "react";
 
 const FloatingContact = () => {
   const handleCall = () => {
-    window.open("tel:19001881", "_self");
+    window.open("https://wa.me/84961542616", "_blank");
   };
 
   const handleWhatsApp = () => {
@@ -33,7 +33,7 @@ const FloatingContact = () => {
         <button
           onClick={handleCall}
           className="bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors"
-          title="Gọi ngay"
+          title="Call Now"
         >
           <i className="fas fa-phone text-xl"></i>
         </button>

@@ -1,15 +1,42 @@
 /* Hero section specific styles */
 .hero-gradient {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  background: linear-gradient(
+    135deg,
+    #f43f5e,
+    #f87171
+  ); /* gradient đỏ hồng nổi bật */
 }
 
 .search-form {
   backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.search-button {
+  transition: all 0.3s ease-in-out;
 }
 
 .search-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.4); /* đỏ hồng */
+}
+
+.carousel-container {
+  padding: 1rem;
+}
+
+.custom-dot-list {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-item-padding-40-px {
+  padding: 0 10px;
 }
 
 @media (max-width: 768px) {

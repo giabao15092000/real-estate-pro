@@ -2,19 +2,19 @@ import React from "react";
 
 const QuickLinks = () => {
   const quickLinks = [
-    { icon: "fas fa-building", title: "Chung cư", href: "#" },
-    { icon: "fas fa-home", title: "Nhà riêng", href: "#" },
-    { icon: "fas fa-city", title: "Biệt thự", href: "#" },
-    { icon: "fas fa-store", title: "Nhà mặt phố", href: "#" },
-    { icon: "fas fa-briefcase", title: "Văn phòng", href: "#" },
-    { icon: "fas fa-warehouse", title: "Kho xưởng", href: "#" },
+    { icon: "fas fa-building", title: "Apartment", href: "#" },
+    { icon: "fas fa-home", title: "House", href: "#" },
+    { icon: "fas fa-city", title: "Villa", href: "#" },
+    { icon: "fas fa-store", title: "Shophouse", href: "#" },
+    { icon: "fas fa-briefcase", title: "Office", href: "#" },
+    { icon: "fas fa-warehouse", title: "Warehouse", href: "#" },
   ];
 
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
-          Tìm kiếm nhanh
+          QuickSearchs
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {quickLinks.map((link, index) => (

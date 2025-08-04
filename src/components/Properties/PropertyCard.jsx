@@ -1,37 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { formatPrice, formatDate, getStatusBadge } from "../../utils/helpers";
 
 const PropertyCard = ({ property, onClick }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
-    console.log("Added to favorites:", property.id);
+    setIsFavorite(!isFavorite);
+    console.log(
+      `${!isFavorite ? "Added to" : "Removed from"} favorites:`,
+      property.id
+    );
   };
 
   return (
     <div
-      className="property-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer relative"
+      className="property-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer relative block"
       onClick={() => onClick(property.id)}
     >
-      <div className="property-status">
-        {property.status && (
+      {/* Trạng thái VIP/HOT/NEW */}
+      {property.status && (
+        <div className="absolute top-4 left-4 z-10">
           <span className={getStatusBadge(property.status)}>
             {property.status.toUpperCase()}
           </span>
-        )}
-      </div>
-      <div className="property-favorite">
+        </div>
+      )}
+
+      {/* Nút yêu thích */}
+      <div className="absolute top-4 right-4 z-10">
         <button
           onClick={handleFavoriteClick}
           className="bg-white bg-opacity-80 p-2 rounded-full hover:bg-opacity-100 transition-all"
         >
-          <i className="far fa-heart text-red-600"></i>
+          <i
+            className={`${isFavorite ? "fas" : "far"} fa-heart text-red-600`}
+          ></i>
         </button>
       </div>
+
+      {/* Ảnh */}
       <img
         src={property.image}
         alt={property.title}
         className="w-full h-48 object-cover"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/img/placeholder.jpg"; // fallback image
+        }}
       />
+
+      {/* Nội dung */}
       <div className="p-4">
         <h4 className="text-lg font-semibold mb-2 text-gray-800 line-clamp-2">
           {property.title}

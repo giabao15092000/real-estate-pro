@@ -23,11 +23,11 @@ export const getStatusBadge = (status) => {
 
 export const getCategoryName = (category) => {
   const names = {
-    apartment: "Căn hộ chung cư",
-    house: "Nhà riêng",
-    villa: "Biệt thự",
-    shophouse: "Nhà mặt phố",
-    office: "Văn phòng",
+    apartment: "Apartment",
+    house: "House",
+    villa: "Villa",
+    shophouse: "Shophouse",
+    office: "Office",
   };
   return names[category] || category;
 };

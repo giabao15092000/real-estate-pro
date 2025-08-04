@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import TopBar from "./components/Common/TopBar";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
+import Hero3D from "./components/Hero/Hero3D"; // 👈 dùng Hero3D thay vì Hero
 import Statistics from "./components/Common/Statistics";
 import PropertiesSection from "./components/Properties/PropertiesSection";
 import QuickLinks from "./components/Common/QuickLinks";
@@ -16,7 +16,7 @@ function App() {
     <div className="App bg-gray-50 font-sans">
       <TopBar />
       <Header />
-      <Hero />
+      <Hero3D /> {/* 👈 gọi Hero3D ở đây */}
       <Statistics />
       <PropertiesSection />
       <QuickLinks />

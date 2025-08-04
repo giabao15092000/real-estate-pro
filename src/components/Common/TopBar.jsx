@@ -27,13 +27,13 @@ const TopBar = () => {
               onClick={() => openModal("login")}
               className="hover:text-gray-200"
             >
-              Đăng nhập
+              Login
             </button>
             <button
               onClick={() => openModal("register")}
               className="hover:text-gray-200"
             >
-              Đăng ký
+              Sign up
             </button>
           </div>
         </div>

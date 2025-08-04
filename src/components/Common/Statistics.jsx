@@ -14,25 +14,25 @@ const Statistics = () => {
             <div className="stats-counter" data-target="100000">
               0
             </div>
-            <p className="text-gray-600 mt-2">Tin đăng</p>
+            <p className="text-gray-600 mt-2">Posted News</p>
           </div>
           <div>
             <div className="stats-counter" data-target="50000">
               0
             </div>
-            <p className="text-gray-600 mt-2">Thành viên</p>
+            <p className="text-gray-600 mt-2">Members</p>
           </div>
           <div>
             <div className="stats-counter" data-target="1000">
               0
             </div>
-            <p className="text-gray-600 mt-2">Môi giới</p>
+            <p className="text-gray-600 mt-2">Agents</p>
           </div>
           <div>
             <div className="stats-counter" data-target="63">
               0
             </div>
-            <p className="text-gray-600 mt-2">Tỉnh/Thành</p>
+            <p className="text-gray-600 mt-2">Provices/Cities</p>
           </div>
         </div>
       </div>
