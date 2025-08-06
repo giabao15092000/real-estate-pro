@@ -58,11 +58,11 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
                 </div>
               </div>
               <div className="grid grid-cols-4 gap-2">
-                {[1, 2, 3, 4].map((index) => (
+                {(property.images || []).map((imgUrl, index) => (
                   <img
                     key={index}
-                    src={property.image}
-                    alt={`Image ${index}`}
+                    src={imgUrl}
+                    alt={`Image ${index + 1}`}
                     className="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80"
                   />
                 ))}

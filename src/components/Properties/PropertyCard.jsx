@@ -13,6 +13,9 @@ const PropertyCard = ({ property, onClick }) => {
     );
   };
 
+  // const placeholder = process.env.PUBLIC_URL + "/img/placeholder.jpg"; // fallback image
+
+  // http://localhost:3000/real-estate-pro/img/placeholder.jpg
   return (
     <div
       className="property-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer relative block"
@@ -46,7 +49,9 @@ const PropertyCard = ({ property, onClick }) => {
         className="w-full h-48 object-cover"
         onError={(e) => {
           e.target.onerror = null;
-          e.target.src = "/img/placeholder.jpg"; // fallback image
+          e.target.src = process.env.PUBLIC_URL + "/img/placeholder.jpg";
+
+          // e.target.src = "/img/placeholder.jpg"; // fallback image
         }}
       />
 

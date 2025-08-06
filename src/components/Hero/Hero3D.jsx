@@ -5,7 +5,7 @@ import PropertyCard from "../Properties/PropertyCard";
 import PropertyModal from "../Properties/PropertyModal";
 
 const Hero3D = () => {
-  const [filteredData, setFilteredData] = useState(properties);
+  const [filteredData, setFilteredData] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
 
   const selectedProperty = filteredData.find((p) => p.id === selectedId);
@@ -13,6 +13,7 @@ const Hero3D = () => {
   return (
     <>
       <section
+        id="hero"
         className="relative h-[60vh] md:h-[70vh] bg-cover bg-center"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/img/hero-bg.webp)`,
