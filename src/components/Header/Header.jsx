@@ -1,24 +1,11 @@
 import React, { useState } from "react";
 import "./Header.css";
 
-const Header = ({ setFilteredType }) => {
-  const [isMobileMenuOpen, setIsMobileMenuMenuOpen] = useState(false);
+const Header = ({ goToSection }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleSelectTypeAndScroll = (type, sectionId) => {
-    setFilteredType(type); // 'all', 'buy', 'rent'
-
-    setIsMobileMenuMenuOpen(false);
-
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -37,42 +24,42 @@ const Header = ({ setFilteredType }) => {
             {/* Desktop Menu */}
             <nav className="hidden lg:flex flex-1 justify-center space-x-8">
               <button
-                onClick={() => handleSelectTypeAndScroll("all", "hero")}
+                onClick={() => goToSection("hero")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 Home
               </button>
 
               <button
-                onClick={() => handleSelectTypeAndScroll("all", "featured")}
+                onClick={() => goToSection("featured")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 Featured Properties
               </button>
 
               <button
-                onClick={() => handleSelectTypeAndScroll("buy", "for-sale")}
+                onClick={() => goToSection("for-sale")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 Properties for Sale
               </button>
 
               <button
-                onClick={() => handleSelectTypeAndScroll("rent", "for-rent")}
+                onClick={() => goToSection("for-rent")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 Properties for Rent
               </button>
 
               <button
-                onClick={() => handleSelectTypeAndScroll("all", "news")}
+                onClick={() => goToSection("news")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 News
               </button>
 
               <button
-                onClick={() => handleSelectTypeAndScroll("all", "contact")}
+                onClick={() => goToSection("contact")}
                 className="text-gray-700 hover:text-red-600 transition-colors"
               >
                 Contact
@@ -100,37 +87,37 @@ const Header = ({ setFilteredType }) => {
         <div className="bg-white shadow-lg lg:hidden">
           <div className="px-4 py-2 space-y-2">
             <button
-              onClick={() => handleSelectTypeAndScroll("all", "hero")}
+              onClick={() => goToSection("hero")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               Home
             </button>
             <button
-              onClick={() => handleSelectTypeAndScroll("all", "featured")}
+              onClick={() => goToSection("featured")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               Featured Properties
             </button>
             <button
-              onClick={() => handleSelectTypeAndScroll("buy", "for-sale")}
+              onClick={() => goToSection("for-sale")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               Properties for Sale
             </button>
             <button
-              onClick={() => handleSelectTypeAndScroll("rent", "for-rent")}
+              onClick={() => goToSection("for-rent")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               Properties for Rent
             </button>
             <button
-              onClick={() => handleSelectTypeAndScroll("all", "news")}
+              onClick={() => goToSection("news")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               News
             </button>
             <button
-              onClick={() => handleSelectTypeAndScroll("all", "contact")}
+              onClick={() => goToSection("contact")}
               className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
             >
               Contact

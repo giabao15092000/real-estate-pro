@@ -11,8 +11,14 @@
     "area": 236,
     "furnished": "partly furnished",
     "description": "Townhouse in Hai Chau, Da Nang, area 236m², fully equipped.",
-    "image": "https://neohouse.vn/wp-content/uploads/2023/05/uu-diem-noi-bat-cua-nha-san-vuon-co-ho-boi-1.jpg",
+    "image": "",
 
+    "images": [
+      "/img/house-1_1.jpg",
+      "/img/house-1_2.jpg",
+      "/img/house-1_3.jpg",
+      "/img/house-1_4.jpg"
+    ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
     "amenities": [

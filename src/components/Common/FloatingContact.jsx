@@ -6,7 +6,7 @@ const FloatingContact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/84901234567", "_blank");
+    window.open("https://wa.me/84961542616", "_blank");
   };
 
   const handleMessenger = () => {
