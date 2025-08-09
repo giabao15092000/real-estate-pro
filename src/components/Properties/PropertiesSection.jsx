@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import PropertyCard from "./PropertyCard";
 import PropertyModal from "./PropertyModal";
+
 import "./Properties.css";
 
 const PropertiesSection = ({
@@ -15,10 +16,16 @@ const PropertiesSection = ({
   const [sortBy, setSortBy] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+  const [displayProperties, setDisplayProperties] = useState(properties);
+  // Nhận dữ liệu từ PropertySearchBar
+  const handleSearch = (filteredList) => {
+    setDisplayProperties(filteredList);
+    setCurrentPage(1);
+  };
 
-  // 👉 Sorting + Pagination combined with useMemo
+  // Trong useMemo, thay properties thành displayProperties
   const sortedAndPaginatedProperties = useMemo(() => {
-    let result = [...properties];
+    let result = [...displayProperties];
 
     // Sorting
     switch (sortBy) {
@@ -45,11 +52,13 @@ const PropertiesSection = ({
     }
 
     return result;
-  }, [properties, sortBy, currentPage, showPagination]);
+  }, [displayProperties, sortBy, currentPage, showPagination]);
 
   const totalPages = useMemo(() => {
-    return showPagination ? Math.ceil(properties.length / itemsPerPage) : 1;
-  }, [properties.length, showPagination]);
+    return showPagination
+      ? Math.ceil(displayProperties.length / itemsPerPage)
+      : 1;
+  }, [displayProperties.length, showPagination]);
 
   const handlePropertyClick = (id) => {
     const property = properties.find((p) => p.id === id);

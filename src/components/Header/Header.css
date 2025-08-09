@@ -1,12 +1,49 @@
-/* Header specific styles */
-.header-dropdown {
-  transition: all 0.3s ease;
+/* Hover logo */
+.header-logo {
+  transition: transform 0.3s ease;
 }
-
 .header-logo:hover {
   transform: scale(1.05);
 }
 
+/* Nút menu desktop */
+.nav-btn {
+  color: #4b5563; /* text-gray-700 */
+  transition: color 0.3s;
+}
+.nav-btn:hover {
+  color: #dc2626; /* text-red-600 */
+}
+
+/* Nút menu mobile */
+.mobile-btn {
+  display: block;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: left;
+  color: #4b5563;
+  transition: color 0.3s;
+}
+.mobile-btn:hover {
+  color: #dc2626;
+}
+
+/* Menu mobile animation */
+.mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive - ẩn menu desktop khi < 1024px */
 @media (max-width: 1024px) {
   .header-nav {
     display: none;

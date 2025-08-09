@@ -1,12 +1,11 @@
 export const formatPrice = (price) => {
-  if (price >= 1000000000) {
-    return (price / 1000000000).toFixed(1) + " tỷ";
-  } else if (price >= 1000000) {
-    return (price / 1000000).toFixed(0) + " triệu";
-  }
-  return price.toLocaleString("vi-VN");
+  const exchangeRate = 25000; // Tỉ giá VND → USD
+  const usdPrice = price / exchangeRate;
+  return usdPrice.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
 };
-
 export const formatDate = (dateString) => {
   const date = new Date(dateString);
   return date.toLocaleDateString("vi-VN");

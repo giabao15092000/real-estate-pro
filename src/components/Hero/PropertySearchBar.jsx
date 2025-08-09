@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { formatPrice } from "../../utils/helpers";
 
 const PropertySearchBar = ({ properties, onSearch }) => {
   const [filters, setFilters] = useState({
@@ -8,6 +9,14 @@ const PropertySearchBar = ({ properties, onSearch }) => {
     category: "",
     type: "",
   });
+
+  const locationMap = {
+    "Hà Nội": "Hanoi",
+    "TP HCM": "Ho Chi Minh City",
+    "Đà Nẵng": "Da Nang",
+    "Hải Phòng": "Hai Phong",
+    "Cần Thơ": "Can Tho",
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,13 +58,17 @@ const PropertySearchBar = ({ properties, onSearch }) => {
   );
 
   return (
-    <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg w-full max-w-6xl">
+    <div
+      className=" p-6 rounded-xl shadow-2xl border border-gray-700 w-full max-w-6xl mx-auto"
+      style={{ backgroundColor: "#90C908" }}
+    >
       <div className="flex flex-wrap justify-center gap-4">
+        {/* Select chung style */}
         <select
           name="area"
           value={filters.area}
           onChange={handleChange}
-          className="p-2 rounded w-48"
+          className="p-2 rounded-lg w-48 bg-white hover:bg-lime-200 border border-gray-600 focus:ring-2 focus:ring-lime-400"
         >
           <option value="">Area</option>
           {areas.map((a, idx) => (
@@ -69,12 +82,12 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="price"
           value={filters.price}
           onChange={handleChange}
-          className="p-2 rounded w-48"
+          className="p-2 rounded-lg w-48 bg-white hover:bg-lime-200 text-black border border-gray-600 focus:ring-2 focus:ring-lime-400"
         >
           <option value="">Price</option>
           {prices.map((p, idx) => (
             <option key={idx} value={p}>
-              {p.toLocaleString()} đ
+              {formatPrice(p)}
             </option>
           ))}
         </select>
@@ -83,12 +96,12 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="location"
           value={filters.location}
           onChange={handleChange}
-          className="p-2 rounded w-48"
+          className="p-2 rounded-lg w-48 bg-white hover:bg-lime-200 text-black border border-gray-600 focus:ring-2 focus:ring-lime-400"
         >
           <option value="">Location</option>
           {locations.map((l, idx) => (
             <option key={idx} value={l}>
-              {l}
+              {locationMap[l] || l}
             </option>
           ))}
         </select>
@@ -97,7 +110,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="category"
           value={filters.category}
           onChange={handleChange}
-          className="p-2 rounded w-48"
+          className="p-2 rounded-lg w-48 bg-white hover:bg-lime-200 text-black border border-gray-600 focus:ring-2 focus:ring-lime-400"
         >
           <option value="">Category</option>
           {categories.map((c, idx) => (
@@ -111,7 +124,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="type"
           value={filters.type}
           onChange={handleChange}
-          className="p-2 rounded w-48"
+          className="p-2 rounded-lg w-48 bg-white hover:bg-lime-200 text-black border border-gray-600 focus:ring-2 focus:ring-lime-400"
         >
           <option value="">Type</option>
           {types.map((t, idx) => (
@@ -123,7 +136,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
 
         <button
           onClick={handleSearch}
-          className="bg-lime-600 hover:bg-lime-700 text-white px-6 py-2 rounded"
+          className="bg-white hover:bg-lime-200 text-black font-semibold px-6 py-2 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
         >
           SEARCH
         </button>

@@ -74,9 +74,6 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
                 <p className="text-3xl font-bold">
                   {formatPrice(property.price)}
                 </p>
-                <p className="text-sm opacity-90">
-                  {property.type === "rent" ? "VNĐ/tháng" : "VNĐ"}
-                </p>
               </div>
 
               <div className="space-y-4 mb-6">
@@ -94,27 +91,27 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
                 <div className="bg-gray-50 p-4 rounded-lg text-center">
                   <i className="fas fa-bed text-red-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.bedrooms}</p>
-                  <p className="text-sm text-gray-600">Phòng ngủ</p>
+                  <p className="text-sm text-gray-600">Bedrooms</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg text-center">
                   <i className="fas fa-bath text-red-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.bathrooms}</p>
-                  <p className="text-sm text-gray-600">Phòng tắm</p>
+                  <p className="text-sm text-gray-600">Bathrooms</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg text-center">
                   <i className="fas fa-expand-arrows-alt text-red-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.area}m²</p>
-                  <p className="text-sm text-gray-600">Diện tích</p>
+                  <p className="text-sm text-gray-600">Area</p>
                 </div>
               </div>
 
               <div className="mb-6">
-                <h5 className="font-semibold mb-3">Mô tả:</h5>
+                <h5 className="font-semibold mb-3">Description:</h5>
                 <p className="text-gray-700">{property.description}</p>
               </div>
 
               <div className="mb-6">
-                <h5 className="font-semibold mb-3">Tiện ích:</h5>
+                <h5 className="font-semibold mb-3">Amenities:</h5>
                 <div className="flex flex-wrap gap-2">
                   {property.amenities.map((amenity, index) => (
                     <span
@@ -128,7 +125,7 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
-                <h5 className="font-semibold mb-3">Thông tin liên hệ:</h5>
+                <h5 className="font-semibold mb-3">Contact Information:</h5>
                 <div className="flex items-center mb-2">
                   <i className="fas fa-user text-red-600 mr-3"></i>
                   <span>{property.agent}</span>
@@ -142,7 +139,7 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
                     onClick={handleCall}
                     className="bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors"
                   >
-                    <i className="fas fa-phone mr-2"></i>Gọi ngay
+                    <i className="fas fa-phone mr-2"></i>Call Now
                   </button>
                   <button
                     onClick={handleWhatsApp}

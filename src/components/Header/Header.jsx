@@ -8,117 +8,114 @@ const Header = ({ goToSection }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Style nút màu đen + ánh sao
+  const navBtnStyle =
+    "relative px-4 py-2 rounded-lg font-medium bg-black text-white overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 " +
+    "before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full " +
+    "before:bg-[radial-gradient(white,transparent_20%)] before:bg-[length:3px_3px] before:opacity-30 before:animate-twinkle";
+
   return (
     <>
-      <header className="bg-white shadow-lg sticky top-0 z-50">
+      <header className="bg-black shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <i className="fas fa-home text-3xl text-red-600"></i>
-              <h1 className="text-2xl font-bold text-gray-800">
-                RealEstatePro
-              </h1>
+            <div
+              className="flex items-center space-x-2 cursor-pointer header-logo"
+              onClick={() => goToSection("hero")}
+            >
+              <i className="fas fa-home text-3xl text-yellow-400"></i>
+              <h1 className="text-2xl font-bold text-white">RealEstatePro</h1>
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden lg:flex flex-1 justify-center space-x-8">
+            <nav className="hidden lg:flex flex-1 justify-center space-x-4 header-nav">
               <button
                 onClick={() => goToSection("hero")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 Home
               </button>
-
               <button
                 onClick={() => goToSection("featured")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 Featured Properties
               </button>
-
               <button
                 onClick={() => goToSection("for-sale")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 Properties for Sale
               </button>
-
               <button
                 onClick={() => goToSection("for-rent")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 Properties for Rent
               </button>
-
               <button
                 onClick={() => goToSection("news")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 News
               </button>
-
               <button
                 onClick={() => goToSection("contact")}
-                className="text-gray-700 hover:text-red-600 transition-colors"
+                className={navBtnStyle}
               >
                 Contact
               </button>
             </nav>
 
-            {/* Buttons */}
-            <div className="flex items-center space-x-4">
-              <button className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
-                <i className="fas fa-plus mr-2"></i>Post Listing
-              </button>
-              <button
-                className="lg:hidden text-gray-700"
-                onClick={toggleMobileMenu}
-              >
-                <i className="fas fa-bars text-xl"></i>
-              </button>
-            </div>
+            {/* Mobile menu button */}
+            <button
+              className="lg:hidden text-white hover:text-yellow-300 transition"
+              onClick={toggleMobileMenu}
+            >
+              <i className="fas fa-bars text-xl"></i>
+            </button>
           </div>
         </div>
       </header>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="bg-white shadow-lg lg:hidden">
-          <div className="px-4 py-2 space-y-2">
+        <div className="bg-black shadow-lg lg:hidden mobile-menu">
+          <div className="px-4 py-4 space-y-3">
             <button
               onClick={() => goToSection("hero")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               Home
             </button>
             <button
               onClick={() => goToSection("featured")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               Featured Properties
             </button>
             <button
               onClick={() => goToSection("for-sale")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               Properties for Sale
             </button>
             <button
               onClick={() => goToSection("for-rent")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               Properties for Rent
             </button>
             <button
               onClick={() => goToSection("news")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               News
             </button>
             <button
               onClick={() => goToSection("contact")}
-              className="block py-2 text-gray-700 hover:text-red-600 w-full text-left"
+              className={`${navBtnStyle} w-full`}
             >
               Contact
             </button>

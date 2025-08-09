@@ -38,16 +38,18 @@ function AppContent() {
 
   const handleSelectTypeAndScroll = (type) => {
     const sectionIdMap = {
-      home: "hero",
+      hero: "hero",
       featured: "featured",
-      buy: "for-sale",
-      rent: "for-rent",
+      "for-sale": "for-sale",
+      "for-rent": "for-rent",
       news: "news",
       contact: "contact",
     };
 
-    if (type === "buy" || type === "rent") {
-      setFilteredType(type);
+    if (type === "for-sale") {
+      setFilteredType("buy");
+    } else if (type === "for-rent") {
+      setFilteredType("rent");
     } else {
       setFilteredType("all");
     }

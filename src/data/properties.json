@@ -45,6 +45,12 @@
     "furnished": "unfurnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 41m², fully equipped.",
     "image": "https://neohouse.vn/wp-content/uploads/2023/05/uu-diem-noi-bat-cua-nha-san-vuon-co-ho-boi-2.jpg",
+    "images": [
+      "/img/house-2_1.jpg",
+      "/img/house-2_2.jpg",
+      "/img/house-2_3.jpg",
+      "/img/house-2_4.jpg"
+    ],
     "agent": "Vũ Thị Mai",
     "phone": "0945678901",
     "amenities": ["Swimming Pool", "24/7 Security", "Elevator", "Playground"],
@@ -65,6 +71,12 @@
     "furnished": "unfurnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 48m², fully equipped.",
     "image": "https://photo.rever.vn/photo/v2/get/IP+wv4zEdFfNspHTFN33KrfWPjE9rmnKeEJUXAiOUkw=/750x500/image.jpg",
+    "images ": [
+      "/img/house-3_1.jpg",
+      "/img/house-3_2.jpg",
+      "/img/house-3_3.jpg",
+      "/img/house-3_4.jpg"
+    ],
     "agent": "Phạm Quốc Tuấn",
     "phone": "0934567890",
     "amenities": ["Garden", "BBQ", "Gym", "Playground", "Elevator"],
@@ -85,6 +97,12 @@
     "furnished": "partly furnished",
     "description": "Shophouse in Thanh Xuan, Hanoi, area 208m², fully equipped.",
     "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "images": [
+      "/img/house-4_1.jpg",
+      "/img/house-4_2.jpg",
+      "/img/house-4_3.jpg",
+      "/img/house-4_4.jpg"
+    ],
     "agent": "Nguyễn Thị Lan",
     "phone": "0901234567",
     "amenities": ["BBQ", "Playground", "Elevator", "Swimming Pool"],
@@ -105,6 +123,12 @@
     "furnished": "partly furnished",
     "description": "Shophouse in Cau Giay, Hanoi, area 106m², fully equipped.",
     "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "images": [
+      "/img/house-5_1.jpg",
+      "/img/house-5_2.jpg",
+      "/img/house-5_3.jpg",
+      "/img/house-5_4.jpg"
+    ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
     "amenities": ["Gym", "Swimming Pool"],

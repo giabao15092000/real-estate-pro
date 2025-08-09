@@ -13,9 +13,6 @@ const PropertyCard = ({ property, onClick }) => {
     );
   };
 
-  // const placeholder = process.env.PUBLIC_URL + "/img/placeholder.jpg"; // fallback image
-
-  // http://localhost:3000/real-estate-pro/img/placeholder.jpg
   return (
     <div
       className="property-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer relative block"

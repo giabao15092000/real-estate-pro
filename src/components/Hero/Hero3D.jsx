@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropertySearchBar from "./PropertySearchBar";
-import { properties } from "../../data/properties";
+import propertiesData from "../../data/properties.json"; // Lấy trực tiếp từ JSON
 import PropertyCard from "../Properties/PropertyCard";
 import PropertyModal from "../Properties/PropertyModal";
 
@@ -22,7 +22,7 @@ const Hero3D = () => {
         <div className="absolute inset-0 bg-black bg-opacity-30" />
         <div className="absolute inset-0 flex items-end justify-center pb-4 px-4">
           <PropertySearchBar
-            properties={properties}
+            properties={propertiesData}
             onSearch={setFilteredData}
           />
         </div>
@@ -31,7 +31,7 @@ const Hero3D = () => {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">
-            Tìm thấy {filteredData.length} bất động sản
+            Found {filteredData.length} properties
           </h2>
 
           {filteredData.length > 0 ? (
@@ -45,9 +45,7 @@ const Hero3D = () => {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-500">
-              Không tìm thấy bất động sản nào phù hợp.
-            </p>
+            <p className="text-center text-gray-500">No results</p>
           )}
         </div>
       </section>
