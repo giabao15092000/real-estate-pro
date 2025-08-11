@@ -10,13 +10,13 @@ const Header = ({ goToSection }) => {
 
   // Style nút màu đen + ánh sao
   const navBtnStyle =
-    "relative px-4 py-2 rounded-lg font-medium bg-black text-white overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 " +
+    "relative px-4 py-2 rounded-lg font-bold bg-white text-red-600 overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:text-yellow-400 " +
     "before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full " +
-    "before:bg-[radial-gradient(white,transparent_20%)] before:bg-[length:3px_3px] before:opacity-30 before:animate-twinkle";
+    "before:bg-[radial-gradient(red,transparent_20%)] before:bg-[length:3px_3px] before:opacity-30 before:animate-twinkle";
 
   return (
     <>
-      <header className="bg-black shadow-lg sticky top-0 z-50">
+      <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -24,8 +24,8 @@ const Header = ({ goToSection }) => {
               className="flex items-center space-x-2 cursor-pointer header-logo"
               onClick={() => goToSection("hero")}
             >
-              <i className="fas fa-home text-3xl text-yellow-400"></i>
-              <h1 className="text-2xl font-bold text-white">RealEstatePro</h1>
+              <i className="fas fa-home text-3xl text-red"></i>
+              <h1 className="text-2xl font-bold text-red">RealEstatePro</h1>
             </div>
 
             {/* Desktop Menu */}
@@ -64,7 +64,7 @@ const Header = ({ goToSection }) => {
                 onClick={() => goToSection("contact")}
                 className={navBtnStyle}
               >
-                Contact
+                Contact Us
               </button>
             </nav>
 

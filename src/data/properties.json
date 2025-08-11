@@ -11,7 +11,7 @@
     "area": 236,
     "furnished": "partly furnished",
     "description": "Townhouse in Hai Chau, Da Nang, area 236m², fully equipped.",
-    "image": "",
+    "image": "https://a0.muscache.com/im/pictures/41bf1579-84a8-44fa-9295-fc263f36b85a.jpg",
 
     "images": [
       "/img/house-1_1.jpg",
@@ -44,7 +44,7 @@
     "area": 41,
     "furnished": "unfurnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 41m², fully equipped.",
-    "image": "https://neohouse.vn/wp-content/uploads/2023/05/uu-diem-noi-bat-cua-nha-san-vuon-co-ho-boi-2.jpg",
+    "image": "https://cdn.fazwaz.com/wbr/WLZm4sgkwj6M18uiEO4FmLEoESk/5700x3030/unit/1098744/9022ee7a17ca2b096412753b80060361_1.jpg",
     "images": [
       "/img/house-2_1.jpg",
       "/img/house-2_2.jpg",
@@ -70,8 +70,8 @@
     "area": 48,
     "furnished": "unfurnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 48m², fully equipped.",
-    "image": "https://photo.rever.vn/photo/v2/get/IP+wv4zEdFfNspHTFN33KrfWPjE9rmnKeEJUXAiOUkw=/750x500/image.jpg",
-    "images ": [
+    "image": "https://cdn.fazwaz.com/wbr/5GevqSr7s40SL-j1wUMTKYDGN7s/5700x3030/unit/5668844/s-27312149.jpg",
+    "images": [
       "/img/house-3_1.jpg",
       "/img/house-3_2.jpg",
       "/img/house-3_3.jpg",
@@ -96,7 +96,7 @@
     "area": 208,
     "furnished": "partly furnished",
     "description": "Shophouse in Thanh Xuan, Hanoi, area 208m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://file4.batdongsan.com.vn/2020/06/08/hmcVYWuR/20200608100450-8be7.jpg",
     "images": [
       "/img/house-4_1.jpg",
       "/img/house-4_2.jpg",
@@ -122,7 +122,7 @@
     "area": 106,
     "furnished": "partly furnished",
     "description": "Shophouse in Cau Giay, Hanoi, area 106m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://manorland.vn/wp-content/uploads/2025/05/chuyen-nhuong-shophouse-75m-tai-the-manor-central-park-7.jpg",
     "images": [
       "/img/house-5_1.jpg",
       "/img/house-5_2.jpg",
@@ -148,7 +148,13 @@
     "area": 334,
     "furnished": "furnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 334m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://cdn.fazwaz.com/wbr/tMoKcZETa0y4SDLinaqYj9wShBY/5700x3030/unit/1372488/img-20230129-084800-photoroom-1.jpg",
+    "images": [
+      "/img/house-6_1.jpg",
+      "/img/house-6_2.jpg",
+      "/img/house-6_3.jpg",
+      "/img/house-6_4.jpg"
+    ],
     "agent": "Nguyễn Thị Lan",
     "phone": "0901234567",
     "amenities": ["Garden", "Playground", "Swimming Pool", "Parking"],
@@ -168,7 +174,13 @@
     "area": 261,
     "furnished": "partly furnished",
     "description": "Townhouse in District 9, Ho Chi Minh City, area 261m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://cdn.fazwaz.com/wbr/kqLoFXaFJJ0YSAiixmPL22HkNUE/5700x3030/project/107618/phoi-canh-can-ho-tai-the-9-stellars-scaled.jpg",
+    "images": [
+      "/img/house-7_1.jpg",
+      "/img/house-7_2.jpg",
+      "/img/house-7_3.jpg",
+      "/img/house-7-4.jpg"
+    ],
     "agent": "Trần Văn Minh",
     "phone": "0912345678",
     "amenities": ["Gym", "BBQ", "Elevator"],
@@ -188,7 +200,13 @@
     "area": 189,
     "furnished": "furnished",
     "description": "Private House Land in Hoàn Kiếm, Hanoi, area 189m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_01_480x320.jpg",
+    "images": [
+      "/img/house-8_1.jpg",
+      "/img/house-8_2.jpg",
+      "/img/house-8_3.jpg",
+      "/img/house-8_4.jpg"
+    ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
     "amenities": ["Garden", "Gym"],
@@ -574,7 +592,13 @@
     "area": 106,
     "furnished": "unfurnished",
     "description": "Shophouse in Hai Ba Trung, Hanoi, area 106m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://manorland.vn/wp-content/uploads/2025/07/4-ban-shophouse-the-manor-central-park-75m2-5-tang-full-noi-that.jpg",
+    "images": [
+      "/img/house-27_1.jpg",
+      "/img/house-27_2.jpg",
+      "/img/house-27_3.jpg",
+      "/img/house-27_4.jpg"
+    ],
     "agent": "Nguyễn Thị Lan",
     "phone": "0901234567",
     "amenities": ["Parking", "Swimming Pool"],

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import PropertySearchBar from "./PropertySearchBar";
 import propertiesData from "../../data/properties.json"; // Lấy trực tiếp từ JSON
 import PropertyCard from "../Properties/PropertyCard";
@@ -7,8 +8,28 @@ import PropertyModal from "../Properties/PropertyModal";
 const Hero3D = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
+  const [bgIndex, setBgIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   const selectedProperty = filteredData.find((p) => p.id === selectedId);
+  // Danh sách 3 ảnh nền
+  const backgrounds = [
+    `${process.env.PUBLIC_URL}/img/hero-bg1.webp`,
+    `${process.env.PUBLIC_URL}/img/hero-bg2.webp`,
+    `${process.env.PUBLIC_URL}/img/hero-bg3.webp`,
+  ];
+
+  // Đổi ảnh nền 5 giây/lần với fade
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // fade out
+      setTimeout(() => {
+        setBgIndex((prev) => (prev + 1) % backgrounds.length);
+        setFade(true); // fade in
+      }, 500); // thời gian fade out
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -16,7 +37,8 @@ const Hero3D = () => {
         id="hero"
         className="relative h-[60vh] md:h-[70vh] bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/img/hero-bg.webp)`,
+          backgroundImage: `url(${backgrounds[bgIndex]})`,
+          filter: "brightness(1.2)", // tăng 20% độ sáng
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30" />

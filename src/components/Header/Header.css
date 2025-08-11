@@ -1,18 +1,24 @@
 /* Hover logo */
 .header-logo {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #dc2626; /* đỏ mặc định */
 }
 .header-logo:hover {
   transform: scale(1.05);
+  color: #facc15; /* vàng khi hover */
 }
 
 /* Nút menu desktop */
 .nav-btn {
-  color: #4b5563; /* text-gray-700 */
-  transition: color 0.3s;
+  background-color: #ffffff; /* nền trắng */
+  color: #dc2626; /* chữ đỏ mặc định */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .nav-btn:hover {
-  color: #dc2626; /* text-red-600 */
+  color: #facc15; /* chữ vàng khi hover */
 }
 
 /* Nút menu mobile */
@@ -21,11 +27,13 @@
   padding: 0.5rem 0;
   width: 100%;
   text-align: left;
-  color: #4b5563;
-  transition: color 0.3s;
+  background-color: #ffffff; /* nền trắng */
+  color: #dc2626; /* chữ đỏ mặc định */
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .mobile-btn:hover {
-  color: #dc2626;
+  color: #facc15; /* chữ vàng khi hover */
 }
 
 /* Menu mobile animation */

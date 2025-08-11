@@ -17,106 +17,144 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
   };
 
   const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
+    if (e.target === e.currentTarget) onClose();
   };
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4"
       onClick={handleOverlayClick}
     >
-      <div className="bg-white rounded-lg max-w-6xl w-full max-h-screen overflow-y-auto">
+      <div className="bg-white shadow-xl rounded-2xl max-w-6xl w-full max-h-screen overflow-y-auto">
         <div className="p-6">
-          <div className="flex justify-between items-center mb-4">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-4 border-b pb-3">
             <h3 className="text-2xl font-bold text-gray-800">
               {property.title}
             </h3>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-400 hover:text-gray-600 transition"
             >
               <i className="fas fa-times text-xl"></i>
             </button>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left: Images */}
             <div>
               <div className="relative mb-4">
                 <img
                   src={property.image}
                   alt={property.title}
-                  className="w-full h-80 object-cover rounded-lg"
+                  className="w-full h-80 object-cover rounded-xl border border-gray-200"
                 />
-                <div className="absolute top-4 left-4">
-                  {property.status && (
+                {property.status && (
+                  <div className="absolute top-4 left-4">
                     <span className={getStatusBadge(property.status)}>
                       {property.status.toUpperCase()}
                     </span>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
+              {/* Thumbnails */}
               <div className="grid grid-cols-4 gap-2">
-                {[1, 2, 3, 4].map((index) => (
+                {property.images?.map((img, idx) => (
                   <img
-                    key={index}
-                    src={property.image}
-                    alt={`Image ${index}`}
-                    className="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80"
+                    key={idx}
+                    src={process.env.PUBLIC_URL + img}
+                    alt={`Thumbnail ${idx + 1}`}
+                    className="w-full h-20 object-cover rounded-lg border border-gray-200 cursor-pointer hover:opacity-80 transition"
                   />
                 ))}
               </div>
+              {/* Google Maps Iframe */}
+              <div className="mt-6">
+                <h5 className="font-semibold mb-3 text-gray-800">
+                  Location Map:
+                </h5>
+                <iframe
+                  title="Property Location"
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                    property.location
+                  )}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                  className="w-full h-64 rounded-lg border border-gray-200"
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
 
+            {/* Right: Details */}
             <div>
-              <div className="price-badge text-white p-4 rounded-lg mb-6">
+              {/* Price */}
+              <div className="bg-gradient-to-r from-green-500 to-lime-500 text-white p-4 rounded-xl mb-6 shadow-md">
                 <p className="text-3xl font-bold">
                   {formatPrice(property.price)}
                 </p>
               </div>
 
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center">
-                  <i className="fas fa-map-marker-alt text-red-600 mr-3"></i>
+              {/* Basic Info */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-gray-700">
+                  <i className="fas fa-map-marker-alt text-green-600 mr-3"></i>
                   <span>{property.location}</span>
                 </div>
-                <div className="flex items-center">
-                  <i className="fas fa-home text-red-600 mr-3"></i>
+                <div className="flex items-center text-gray-700">
+                  <i className="fas fa-home text-green-600 mr-3"></i>
                   <span>{getCategoryName(property.category)}</span>
                 </div>
               </div>
 
+              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-gray-50 p-4 rounded-lg text-center">
-                  <i className="fas fa-bed text-red-600 text-xl mb-2"></i>
+                <div className="bg-gray-100 p-4 rounded-lg text-center shadow-sm">
+                  <i className="fas fa-bed text-green-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.bedrooms}</p>
                   <p className="text-sm text-gray-600">Bedrooms</p>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-lg text-center">
-                  <i className="fas fa-bath text-red-600 text-xl mb-2"></i>
+                <div className="bg-gray-100 p-4 rounded-lg text-center shadow-sm">
+                  <i className="fas fa-bath text-green-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.bathrooms}</p>
                   <p className="text-sm text-gray-600">Bathrooms</p>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-lg text-center">
-                  <i className="fas fa-expand-arrows-alt text-red-600 text-xl mb-2"></i>
+                <div className="bg-gray-100 p-4 rounded-lg text-center shadow-sm">
+                  <i className="fas fa-expand-arrows-alt text-green-600 text-xl mb-2"></i>
                   <p className="font-semibold">{property.area}m²</p>
                   <p className="text-sm text-gray-600">Area</p>
                 </div>
+                {/* Extra specs */}
+                <div className="bg-gray-100 p-4 rounded-lg text-center shadow-sm">
+                  <i className="fas fa-layer-group text-green-600 text-xl mb-2"></i>
+                  <p className="font-semibold">{property.floor || "N/A"}</p>
+                  <p className="text-sm text-gray-600">Floor</p>
+                </div>
+                <div className="bg-gray-100 p-4 rounded-lg text-center shadow-sm">
+                  <i className="fas fa-couch text-green-600 text-xl mb-2"></i>
+                  <p className="font-semibold">
+                    {property.furnishing || "N/A"}
+                  </p>
+                  <p className="text-sm text-gray-600">Furnishing</p>
+                </div>
               </div>
 
+              {/* Description */}
               <div className="mb-6">
-                <h5 className="font-semibold mb-3">Description:</h5>
-                <p className="text-gray-700">{property.description}</p>
+                <h5 className="font-semibold mb-3 text-gray-800">
+                  Description:
+                </h5>
+                <p className="text-gray-700 leading-relaxed">
+                  {property.description}
+                </p>
               </div>
 
+              {/* Amenities */}
               <div className="mb-6">
-                <h5 className="font-semibold mb-3">Amenities:</h5>
+                <h5 className="font-semibold mb-3 text-gray-800">Amenities:</h5>
                 <div className="flex flex-wrap gap-2">
                   {property.amenities.map((amenity, index) => (
                     <span
                       key={index}
-                      className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm"
+                      className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm shadow-sm"
                     >
                       {amenity}
                     </span>
@@ -124,30 +162,72 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h5 className="font-semibold mb-3">Contact Information:</h5>
-                <div className="flex items-center mb-2">
-                  <i className="fas fa-user text-red-600 mr-3"></i>
+              {/* Contact Info */}
+              <div className="bg-gray-50 p-4 rounded-lg shadow-sm mb-6">
+                <h5 className="font-semibold mb-3 text-gray-800">
+                  Contact Information:
+                </h5>
+                <div className="flex items-center mb-2 text-gray-700">
+                  <i className="fas fa-user text-green-600 mr-3"></i>
                   <span>{property.agent}</span>
                 </div>
-                <div className="flex items-center mb-4">
-                  <i className="fas fa-phone text-red-600 mr-3"></i>
+                <div className="flex items-center mb-4 text-gray-700">
+                  <i className="fas fa-phone text-green-600 mr-3"></i>
                   <span>{property.phone}</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     onClick={handleCall}
-                    className="bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors"
+                    className="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors"
                   >
                     <i className="fas fa-phone mr-2"></i>Call Now
                   </button>
                   <button
                     onClick={handleWhatsApp}
-                    className="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors"
+                    className="bg-lime-500 text-white py-2 rounded-lg hover:bg-lime-600 transition-colors"
                   >
                     <i className="fab fa-whatsapp mr-2"></i>Chat
                   </button>
                 </div>
+              </div>
+
+              {/* Schedule Visit Form (static UI) */}
+              <div className="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <h5 className="font-semibold mb-3 text-gray-800">
+                  Schedule a Visit:
+                </h5>
+                <form className="space-y-3">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-lime-400"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-lime-400"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Your Phone"
+                    className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-lime-400"
+                  />
+                  <input
+                    type="date"
+                    className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-lime-400"
+                  />
+                  <textarea
+                    placeholder="Your Message"
+                    rows="3"
+                    className="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-lime-400"
+                  ></textarea>
+                  <button
+                    type="button"
+                    className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+                  >
+                    Submit
+                  </button>
+                </form>
               </div>
             </div>
           </div>
