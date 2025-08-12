@@ -1,68 +1,100 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { FaSearch, FaPhoneAlt, FaFilter } from 'react-icons/fa';
 
 const HelpCenter = () => {
+  const helpItems = [
+    {
+      title: 'How to Search for Properties',
+      icon: <FaSearch className="text-red-600 text-2xl mr-3" />,
+      img: 'https://plus.unsplash.com/premium_photo-1677408938823-dddebdf2fbff?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      steps: [
+        'Enter keywords in the search bar (e.g., "apartment district 1", "street-front house")',
+        'Use advanced filters to narrow results by: price, area, property type',
+        'Click the "Search" button or press Enter',
+        'View details by clicking on a listing',
+      ],
+    },
+    {
+      title: 'How to Contact the Landlord',
+      icon: <FaPhoneAlt className="text-red-600 text-2xl mr-3" />,
+      img: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=880&auto=format&fit=crop',
+      steps: [
+        "Find the listing you're interested in",
+        'Click the "Contact" button on the listing details page',
+        'Fill in your information and message content',
+        'Click "Send Message" - the information will be sent to the landlord',
+        'Or call the phone number displayed on the listing directly',
+      ],
+    },
+    {
+      title: 'How to Filter Search Results',
+      icon: <FaFilter className="text-red-600 text-2xl mr-3" />,
+      img: 'https://plus.unsplash.com/premium_photo-1679082305850-63541e846a4a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      steps: [
+        'On the search page, click "Advanced Filters"',
+        'Select the criteria you care about:',
+        <ul className="list-disc pl-6 text-gray-700">
+          <li>Price range</li>
+          <li>Area</li>
+          <li>Property type</li>
+          <li>Amenities (for apartments)</li>
+          <li>House orientation</li>
+        </ul>,
+        'Click "Apply Filters" to view results',
+      ],
+    },
+  ];
+
   return (
-    <div className="App bg-gray-50 font-sans">
+    <div className="min-h-screen bg-white font-sans">
       
-      
-      <main className="min-h-screen py-16 bg-white">
+
+      {/* Main Section */}
+      <main className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Trung tâm trợ giúp</h1>
-            
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-xl font-semibold mb-3 text-gray-800 flex items-center">
-                  <i className="fas fa-search text-red-600 mr-3"></i>
-                  Cách tìm kiếm bất động sản
-                </h2>
-                <div className="text-gray-600 space-y-3">
-                  <p>1. Nhập từ khóa vào ô tìm kiếm (ví dụ: "căn hộ quận 1", "nhà mặt phố")</p>
-                  <p>2. Sử dụng bộ lọc nâng cao để thu hẹp kết quả theo: giá, diện tích, loại BĐS</p>
-                  <p>3. Nhấn nút "Tìm kiếm" hoặc ấn Enter</p>
-                  <p>4. Xem chi tiết bằng cách nhấp vào tin đăng</p>
+          <div className="max-w-5xl mx-auto text-center mb-12">
+            <h1 className="text-4xl font-extrabold text-red-600 border-b-4 border-red-600 inline-block pb-3">
+              Help Center
+            </h1>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Find quick answers to your questions about searching, contacting landlords, and filtering results.
+            </p>
+          </div>
+
+          {/* Help Cards */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {helpItems.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6 text-left">
+                  <h2 className="text-xl font-semibold text-gray-800 flex items-center mb-4">
+                    {item.icon}
+                    {item.title}
+                  </h2>
+                  <div className="space-y-2 text-gray-600">
+                    {item.steps.map((step, i) => (
+                      <p key={i} className="flex items-start">
+                        <span className="text-red-500 font-bold mr-2">{i + 1}.</span>
+                        {step}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-xl font-semibold mb-3 text-gray-800 flex items-center">
-                  <i className="fas fa-phone text-red-600 mr-3"></i>
-                  Cách liên hệ với chủ nhà
-                </h2>
-                <div className="text-gray-600 space-y-3">
-                  <p>1. Tìm tin đăng bạn quan tâm</p>
-                  <p>2. Nhấn nút "Liên hệ" trên trang chi tiết</p>
-                  <p>3. Điền thông tin và nội dung bạn muốn hỏi</p>
-                  <p>4. Nhấn "Gửi tin nhắn" - thông tin sẽ được gửi đến chủ nhà</p>
-                  <p>Hoặc gọi trực tiếp số điện thoại hiển thị trên tin đăng</p>
-                </div>
-              </div>
-              
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-xl font-semibold mb-3 text-gray-800 flex items-center">
-                  <i className="fas fa-filter text-red-600 mr-3"></i>
-                  Cách lọc kết quả tìm kiếm
-                </h2>
-                <div className="text-gray-600 space-y-3">
-                  <p>1. Trên trang tìm kiếm, nhấn vào "Bộ lọc nâng cao"</p>
-                  <p>2. Chọn các tiêu chí bạn quan tâm:</p>
-                  <ul className="list-disc pl-5">
-                    <li>Khoảng giá</li>
-                    <li>Diện tích</li>
-                    <li>Loại bất động sản</li>
-                    <li>Tiện ích (chung cư)</li>
-                    <li>Hướng nhà</li>
-                  </ul>
-                  <p>3. Nhấn "Áp dụng bộ lọc" để xem kết quả</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </main>
-      
+
       
     </div>
   );

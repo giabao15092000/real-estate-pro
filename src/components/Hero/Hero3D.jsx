@@ -9,7 +9,7 @@ const Hero3D = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
   const [bgIndex, setBgIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [, setFade] = useState(true);
 
   const selectedProperty = filteredData.find((p) => p.id === selectedId);
   // Danh sách 3 ảnh nền

@@ -1,83 +1,172 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import {
+  DocumentTextIcon,
+  ShieldCheckIcon,
+  ScaleIcon,
+  CreditCardIcon,
+  ExclamationCircleIcon,
+  CalendarIcon
+} from '@heroicons/react/24/outline';
+import { FaHandshake } from 'react-icons/fa';
 
 const TermsOfService = () => {
   return (
-    <div className="App bg-gray-50 font-sans">
+    <div className="App font-sans bg-white">
       
       
-      <main className="min-h-screen py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8 text-gray-800 border-b pb-4">Điều khoản sử dụng</h1>
-            
-            <div className="text-gray-700 space-y-6">
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">1. Giới thiệu</h2>
-                <p>Bằng việc sử dụng dịch vụ của RealEstatePro, bạn đồng ý với các điều khoản sử dụng được quy định dưới đây. Vui lòng đọc kỹ trước khi sử dụng.</p>
+      <main className="min-h-screen py-16">
+        {/* Hero Section */}
+        <div className="bg-red-600 text-white py-12 mb-12">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
+              <p className="text-xl">Please read these terms carefully before using our services</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <div className="text-gray-700 space-y-10">
+              {/* Section 1 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <DocumentTextIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">1. Introduction</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Legal document on a desk"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>Welcome to our Terms of Service. These terms outline the rules and regulations for using our website and services.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">2. Điều kiện sử dụng</h2>
-                <p>Khi sử dụng RealEstatePro, bạn cam kết:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Cung cấp thông tin chính xác, trung thực</li>
-                  <li>Không đăng tin giả mạo, sai sự thật</li>
-                  <li>Không sử dụng dịch vụ cho mục đích bất hợp pháp</li>
-                  <li>Không can thiệp, phá hoại hệ thống</li>
-                  <li>Chịu trách nhiệm về mọi hoạt động dưới tài khoản của mình</li>
-                </ul>
+
+              {/* Section 2 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <ShieldCheckIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">2. Privacy & Security</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1676618539992-21c7d3b6df0f?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Digital security lock on a laptop"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>We value your privacy and are committed to protecting your personal information.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">3. Quyền và trách nhiệm</h2>
-                <p><span className="font-semibold">Quyền của RealEstatePro:</span></p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Kiểm duyệt, từ chối hoặc xóa tin đăng không phù hợp</li>
-                  <li>Tạm ngưng hoặc chấm dứt tài khoản vi phạm</li>
-                  <li>Thay đổi điều khoản sau khi thông báo</li>
-                </ul>
-                
-                <p className="mt-4"><span className="font-semibold">Trách nhiệm người dùng:</span></p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Bảo mật thông tin tài khoản</li>
-                  <li>Bồi thường thiệt hại nếu vi phạm gây tổn thất</li>
-                  <li>Tuân thủ pháp luật Việt Nam</li>
-                </ul>
+
+              {/* Section 3 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <ScaleIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">3. Rights & Responsibilities</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Scales of justice"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>Users must follow our guidelines and respect the rights of others while using our services.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">4. Thanh toán và phí dịch vụ</h2>
-                <p>Các dịch vụ có phí sẽ được thông báo rõ ràng trước khi sử dụng. Bạn đồng ý thanh toán đầy đủ các khoản phí phát sinh.</p>
-                <p className="mt-2">Phương thức thanh toán: Chuyển khoản ngân hàng, ví điện tử, thẻ tín dụng.</p>
+
+              {/* Section 4 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <CreditCardIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">4. Payments & Billing</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://images.unsplash.com/photo-1561414927-6d86591d0c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Credit card payment"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>Payments must be made promptly and securely. Late payments may result in service suspension.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">5. Giới hạn trách nhiệm</h2>
-                <p>RealEstatePro không chịu trách nhiệm về:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Nội dung tin đăng từ người dùng</li>
-                  <li>Giao dịch giữa người mua và người bán</li>
-                  <li>Thiệt hại do sự cố kỹ thuật ngoài kiểm soát</li>
-                  <li>Hậu quả từ việc sử dụng sai mục đích</li>
-                </ul>
+
+              {/* Section 5 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <ExclamationCircleIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">5. Limitations of Liability</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Warning sign on a document"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>We are not liable for damages arising from the use of our services, except where required by law.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">6. Giải quyết tranh chấp</h2>
-                <p>Mọi tranh chấp phát sinh sẽ được ưu tiên giải quyết thông qua thương lượng. Nếu không đạt được thỏa thuận, vụ việc sẽ được giải quyết tại Tòa án có thẩm quyền tại TP.HCM.</p>
+
+              {/* Section 6 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <FaHandshake className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">6. Dispute Resolution</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Handshake agreement"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>Disputes will be prioritized through negotiation. If unresolved, cases will be settled at the competent court in Ho Chi Minh City.</p>
+                </div>
               </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">7. Hiệu lực điều khoản</h2>
-                <p>Điều khoản này có hiệu lực từ ngày 01/01/2024. Chúng tôi có quyền sửa đổi, bổ sung và sẽ thông báo trước 15 ngày khi có thay đổi quan trọng.</p>
+
+              {/* Section 7 */}
+              <div className="flex flex-col md:flex-row gap-6">
+                <div className="md:w-1/4">
+                  <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <CalendarIcon className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-gray-900">7. Terms Validity</h2>
+                </div>
+                <div className="md:w-3/4">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1721931904143-2896431c980c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Calendar and clock on a desk"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                  <p>These terms are effective from January 1, 2024. We reserve the right to modify them and will provide 15 days notice for significant changes.</p>
+                </div>
               </div>
-              
-              <div className="bg-gray-50 p-4 rounded-lg mt-8">
-                <p className="font-medium">Mọi thắc mắc về điều khoản sử dụng, vui lòng liên hệ:</p>
-                <p className="mt-2">Email: <span className="text-red-600">legal@realestatepro.vn</span></p>
-                <p>Địa chỉ: 123 Nguyễn Huệ, Q.1, TP.HCM</p>
+
+              {/* Contact */}
+              <div className="bg-red-50 p-6 rounded-lg mt-8 border border-red-100">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Questions About Our Terms?</h3>
+                <div className="space-y-2">
+                  <p className="text-gray-700">
+                    Email: <span className="text-red-600 font-medium">legal@realestatepro.vn</span>
+                  </p>
+                  <p className="text-gray-700">
+                    Address: 123 Nguyen Hue, District 1, Ho Chi Minh City
+                  </p>
+                </div>
               </div>
             </div>
           </div>

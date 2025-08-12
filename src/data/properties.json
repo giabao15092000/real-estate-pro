@@ -14,10 +14,10 @@
     "image": "https://a0.muscache.com/im/pictures/41bf1579-84a8-44fa-9295-fc263f36b85a.jpg",
 
     "images": [
-      "/img/house-1_1.jpg",
-      "/img/house-1_2.jpg",
-      "/img/house-1_3.jpg",
-      "/img/house-1_4.jpg"
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1117953417131073892/original/bc7fc5c4-05e5-4e8e-87ef-8a7a8557102b.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1117953417131073892/original/491b141d-518e-4498-9df4-16379e9049c2.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTExNzk1MzQxNzEzMTA3Mzg5Mg%3D%3D/original/b70b3e22-a121-4de5-b2de-dd1855a0f5c2.jpeg?im_w=480",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1117953417131073892/original/5c68cb24-3f59-4185-9c22-7a88ff29a3dd.jpeg?im_w=480"
     ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
@@ -46,10 +46,10 @@
     "description": "Townhouse in Ninh Kieu, Can Tho, area 41m², fully equipped.",
     "image": "https://cdn.fazwaz.com/wbr/WLZm4sgkwj6M18uiEO4FmLEoESk/5700x3030/unit/1098744/9022ee7a17ca2b096412753b80060361_1.jpg",
     "images": [
-      "/img/house-2_1.jpg",
-      "/img/house-2_2.jpg",
-      "/img/house-2_3.jpg",
-      "/img/house-2_4.jpg"
+      "https://cdn.fazwaz.com/wbr/imZLikrwhpgzfs4DFgM3KuHn0Zw/500x500/unit/299711/20200206143048-1f89_wm.jpeg",
+      "https://cdn.fazwaz.com/wbr/QWKf4Bf_3pq6LSVWZvK6KSfb1JU/0x0/unit/299711/20200206143050-c670_wm.jpeg",
+      "https://cdn.fazwaz.com/wbr/j01EgcgqZt7HK75I7l6Q-9OxX8c/500x500/unit/299711/20200206143050-f571_wm.jpeg",
+      "https://cdn.fazwaz.com/wbr/SfMNMamuMZ7Nusdjryn-XNIw0p8/500x500/unit/299711/20200206143051-75a7_wm.jpeg"
     ],
     "agent": "Vũ Thị Mai",
     "phone": "0945678901",
@@ -70,12 +70,12 @@
     "area": 48,
     "furnished": "unfurnished",
     "description": "Townhouse in Ninh Kieu, Can Tho, area 48m², fully equipped.",
-    "image": "https://cdn.fazwaz.com/wbr/5GevqSr7s40SL-j1wUMTKYDGN7s/5700x3030/unit/5668844/s-27312149.jpg",
+    "image": "https://cdn.fazwaz.com/wbr/zioW_JNiMjNApBmwE29lW88sGnM/0x0/unit/303415/20200206151019-3dfc_wm.jpg",
     "images": [
-      "/img/house-3_1.jpg",
-      "/img/house-3_2.jpg",
-      "/img/house-3_3.jpg",
-      "/img/house-3_4.jpg"
+      "https://cdn.fazwaz.com/wbr/NHTLxO_4UlO2CasM2XHMfv5ubJY/500x500/unit/303415/20200206151017-b789_wm.jpg",
+      "https://cdn.fazwaz.com/wbr/JmgQ1wd0rcRWOKGbEoKKRUDW99Q/500x500/unit/303415/20200206151017-145d_wm.jpg",
+      "https://cdn.fazwaz.com/wbr/VPuBIBBKSS8Mk70C_qieRVg_yno/0x0/unit/303415/20200206151016-820d_wm.jpg",
+      "https://cdn.fazwaz.com/wbr/vwQKaas507WtSqTdi2ywnb8wTTw/0x0/unit/303415/20200206151018-a652_wm.jpg"
     ],
     "agent": "Phạm Quốc Tuấn",
     "phone": "0934567890",
@@ -98,10 +98,10 @@
     "description": "Shophouse in Thanh Xuan, Hanoi, area 208m², fully equipped.",
     "image": "https://file4.batdongsan.com.vn/2020/06/08/hmcVYWuR/20200608100450-8be7.jpg",
     "images": [
-      "/img/house-4_1.jpg",
-      "/img/house-4_2.jpg",
-      "/img/house-4_3.jpg",
-      "/img/house-4_4.jpg"
+      "https://file4.batdongsan.com.vn/2025/08/12/20250812093747-df34_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/08/12/20250812093747-69d4_wm.jpg",
+      "https://file4.batdongsan.com.vn/resize/1275x717/2025/07/12/20250712111450-fd07_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/07/12/20250712111519-e030_wm.jpg"
     ],
     "agent": "Nguyễn Thị Lan",
     "phone": "0901234567",
@@ -124,10 +124,10 @@
     "description": "Shophouse in Cau Giay, Hanoi, area 106m², fully equipped.",
     "image": "https://manorland.vn/wp-content/uploads/2025/05/chuyen-nhuong-shophouse-75m-tai-the-manor-central-park-7.jpg",
     "images": [
-      "/img/house-5_1.jpg",
-      "/img/house-5_2.jpg",
-      "/img/house-5_3.jpg",
-      "/img/house-5_4.jpg"
+      "https://file4.batdongsan.com.vn/2025/08/07/20250807203924-6aa5_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/08/07/20250807203926-146b_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/08/07/20250807203927-3ad6_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/08/05/20250805171823-d383_wm.jpg"
     ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
@@ -150,10 +150,10 @@
     "description": "Townhouse in Ninh Kieu, Can Tho, area 334m², fully equipped.",
     "image": "https://cdn.fazwaz.com/wbr/tMoKcZETa0y4SDLinaqYj9wShBY/5700x3030/unit/1372488/img-20230129-084800-photoroom-1.jpg",
     "images": [
-      "/img/house-6_1.jpg",
-      "/img/house-6_2.jpg",
-      "/img/house-6_3.jpg",
-      "/img/house-6_4.jpg"
+      "https://file4.batdongsan.com.vn/2025/07/28/20250728183351-e151_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/07/28/20250728183354-be77_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/07/28/20250728183400-e858_wm.jpg",
+      "https://file4.batdongsan.com.vn/2025/07/28/20250728183400-e858_wm.jpg"
     ],
     "agent": "Nguyễn Thị Lan",
     "phone": "0901234567",
@@ -176,10 +176,10 @@
     "description": "Townhouse in District 9, Ho Chi Minh City, area 261m², fully equipped.",
     "image": "https://cdn.fazwaz.com/wbr/kqLoFXaFJJ0YSAiixmPL22HkNUE/5700x3030/project/107618/phoi-canh-can-ho-tai-the-9-stellars-scaled.jpg",
     "images": [
-      "/img/house-7_1.jpg",
-      "/img/house-7_2.jpg",
-      "/img/house-7_3.jpg",
-      "/img/house-7-4.jpg"
+      "https://cdn.fazwaz.com/wbr/kqLoFXaFJJ0YSAiixmPL22HkNUE/5700x3030/project/107618/phoi-canh-can-ho-tai-the-9-stellars-scaled.jpg",
+      "https://cdn.fazwaz.com/wbr/j-Lg-YpsKn3Rv3MDF4Jat5RFibY/500x500/project/107618/the-9-stellars-6-1024x575.png",
+      "https://cdn.fazwaz.com/wbr/RLpsoRc2gD0DMknEbiQ9tNHqKlo/500x500/project/107618/the-9-stellars-5-1024x575.png",
+      "https://cdn.fazwaz.com/wbr/EaBJKi2jPJJDOY5tqz2LGS9VgmA/500x500/project/107618/phoi-canh-mau-nha-tai-the-9-stellars-scaled.jpg"
     ],
     "agent": "Trần Văn Minh",
     "phone": "0912345678",
@@ -202,10 +202,10 @@
     "description": "Private House Land in Hoàn Kiếm, Hanoi, area 189m², fully equipped.",
     "image": "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_01_480x320.jpg",
     "images": [
-      "/img/house-8_1.jpg",
-      "/img/house-8_2.jpg",
-      "/img/house-8_3.jpg",
-      "/img/house-8_4.jpg"
+      "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_01_480x320.jpg",
+      "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_03_480x320.jpg",
+      "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_04_480x320.jpg",
+      "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_05_480x320.jpg"
     ],
     "agent": "Lê Thị Hồng",
     "phone": "0923456789",
@@ -226,7 +226,13 @@
     "area": 296,
     "furnished": "furnished",
     "description": "Townhouse in Binh Thanh, Ho Chi Minh City, area 296m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvODI0MTEzODIxNWRmNmY5ZTBkYWI4MC5qcGciLCJicmFuZCI6ImRvdHByb3BlcnR5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjExNzAsImhlaWdodCI6NzgwLCJmaXQiOiJjb3ZlciJ9fX0",
+    "images": [
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvMTUzMzYwMjA1ZGY2ZjllMzBiNzIwLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6MTE3MCwiaGVpZ2h0Ijo3ODAsImZpdCI6ImNvdmVyIn19fQ==",
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvNDE2Nzc5NTQ1NWRmNmY5ZTQzMzcxOC5qcGciLCJicmFuZCI6ImRvdHByb3BlcnR5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjExNzAsImhlaWdodCI6NzgwLCJmaXQiOiJjb3ZlciJ9fX0=",
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvNTA3NzQ2Nzg1NWRmNmY5ZTRkM2M0NS5qcGciLCJicmFuZCI6ImRvdHByb3BlcnR5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjExNzAsImhlaWdodCI6NzgwLCJmaXQiOiJjb3ZlciJ9fX0=",
+      "https://storage1.vietnam-real.estate/static/p/doqqs69esk/0vaomijec1tyv8ze/the-grand-hanoi_05_480x320.jpg"
+    ],
     "agent": "Phạm Quốc Tuấn",
     "phone": "0934567890",
     "amenities": ["Elevator", "Playground", "BBQ"],

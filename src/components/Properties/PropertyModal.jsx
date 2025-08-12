@@ -59,15 +59,25 @@ const PropertyModal = ({ property, isOpen, onClose }) => {
               </div>
               {/* Thumbnails */}
               <div className="grid grid-cols-4 gap-2">
-                {property.images?.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={process.env.PUBLIC_URL + img}
-                    alt={`Thumbnail ${idx + 1}`}
-                    className="w-full h-20 object-cover rounded-lg border border-gray-200 cursor-pointer hover:opacity-80 transition"
-                  />
-                ))}
+                {property.images?.map((img, idx) => {
+                  const cleanUrl = img.split("?")[0]; // bỏ phần query string
+                  return (
+                    <a
+                      key={idx}
+                      href={cleanUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={img}
+                        alt={`Thumbnail ${idx + 1}`}
+                        className="w-full h-20 object-cover rounded-lg border border-gray-200 cursor-pointer hover:opacity-80 transition"
+                      />
+                    </a>
+                  );
+                })}
               </div>
+
               {/* Google Maps Iframe */}
               <div className="mt-6">
                 <h5 className="font-semibold mb-3 text-gray-800">
