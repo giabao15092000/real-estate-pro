@@ -15,10 +15,29 @@ const PropertySearchBar = ({ properties, onSearch }) => {
     amenities: [],
     sort: "",
   });
+  const [hasSearched, setHasSearched] = useState(false); // Thêm state để biết đã search chưa
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFilters((prev) => ({ ...prev, [name]: value }));
+    setHasSearched(true); // Mỗi khi thay đổi input là coi như đã search
+  };
+  const handleReset = () => {
+    setFilters({
+      search: "",
+      area: "",
+      price: "",
+      location: "",
+      category: "",
+      type: "",
+      bedrooms: "",
+      bathrooms: "",
+      furnished: "",
+      amenities: [],
+      sort: "",
+    });
+    setHasSearched(false); // Reset về chưa search
+    onSearch([]); // Gửi mảng rỗng lên cha → Found 0 properties
   };
 
   const handleAmenitiesChange = (e) => {
@@ -32,6 +51,11 @@ const PropertySearchBar = ({ properties, onSearch }) => {
   };
 
   useEffect(() => {
+    if (!hasSearched) {
+      onSearch([]); // Lần đầu mở trang trả về 0 kết quả
+      return;
+    }
+    // Nếu đã search, lọc dữ liệu
     let filtered = [...properties];
 
     if (filters.search) {
@@ -280,6 +304,12 @@ const PropertySearchBar = ({ properties, onSearch }) => {
             <span className="text-white">{a}</span>
           </label>
         ))}
+        <button
+          onClick={handleReset}
+          className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+        >
+          Reset
+        </button>
       </div>
     </div>
   );

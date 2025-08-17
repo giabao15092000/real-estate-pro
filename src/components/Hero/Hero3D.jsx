@@ -8,6 +8,7 @@ import PropertyModal from "../Properties/PropertyModal";
 const Hero3D = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
+  const [resultsCount, setResultsCount] = useState(0); // State đếm kết quả
   const [bgIndex, setBgIndex] = useState(0);
   const [, setFade] = useState(true);
 
@@ -30,6 +31,10 @@ const Hero3D = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+  // Mỗi khi filter thay đổi, cập nhật số đếm
+  useEffect(() => {
+    setResultsCount(filteredData.length);
+  }, [filteredData]);
 
   return (
     <>
@@ -46,6 +51,7 @@ const Hero3D = () => {
           <PropertySearchBar
             properties={propertiesData}
             onSearch={setFilteredData}
+            onReset={() => setResultsCount(0)} // thêm hàm reset
           />
         </div>
       </section>
@@ -53,7 +59,8 @@ const Hero3D = () => {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">
-            Found {filteredData.length} properties
+            Found {resultsCount}{" "}
+            {resultsCount === 1 ? "property" : "properties"}
           </h2>
 
           {filteredData.length > 0 ? (

@@ -79,9 +79,9 @@ const PropertiesSection = ({
           className={`text-3xl font-bold pb-2 mb-6 hover:scale-105 transition-transform
             ${
               title.includes("Sale")
-                ? "text-green-600 border-b-4 border-green-300"
+                ? "text-red-600 border-b-4 border-red-300"
                 : title.includes("Rent")
-                ? "text-blue-600 border-b-4 border-blue-300"
+                ? "text-red-600 border-b-4 border-red-300"
                 : "text-red-600 border-b-4 border-red-300"
             }`}
         >

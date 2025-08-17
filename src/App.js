@@ -30,7 +30,11 @@ import Careers from "./pages/About/Careers";
 import Contact from "./pages/About/Contact";
 import PrivacyPolicy from "./pages/About/PrivacyPolicy";
 import TermsOfService from "./pages/About/TermsOfService";
-
+//News Pages
+import NewsList from "./components/News/NewsList";
+import NewsDetail from "./components/News/NewsDetail";
+//Feedback Section
+import FeedbackSection from "./components/Contact/FeedbackSection";
 function AppContent() {
   const [, setFilteredType] = useState("all");
   const navigate = useNavigate();
@@ -44,6 +48,7 @@ function AppContent() {
       "for-rent": "for-rent",
       news: "news",
       contact: "contact",
+      feedback: "feedback",
     };
 
     if (type === "for-sale") {
@@ -108,22 +113,25 @@ function AppContent() {
               />
               <NewsSection id="news" />
               <ContactSection id="contact" />
+              <FeedbackSection />
             </>
           }
         />
-
         {/* Support Routes */}
         <Route path="/support/help-center" element={<HelpCenter />} />
         <Route path="/support/posting-guide" element={<PostingGuide />} />
         <Route path="/support/posting-rules" element={<PostingRules />} />
         <Route path="/support/faq" element={<FAQ />} />
-
         {/* About Routes */}
         <Route path="/about/introduction" element={<Introduction />} />
         <Route path="/about/careers" element={<Careers />} />
         <Route path="/about/contact" element={<Contact />} />
         <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/about/terms-of-service" element={<TermsOfService />} />
+        {/* News Routes */}
+        <Route path="/news" element={<NewsList />} />
+        <Route path="/news/:id" element={<NewsDetail />} />
+        ``
       </Routes>
 
       <Footer goToSection={goToSection} />

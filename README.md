@@ -1,49 +1,54 @@
 # Real Estate Pro
 
-Nền tảng bất động sản hàng đầu Việt Nam - Kết nối hàng triệu người mua và bán bất động sản.
+The leading real estate platform in Vietnam – connecting millions of property buyers and sellers.
 
-## 🚀 Tính năng chính
+## 🚀 Key Features
 
-- 🏠 Tìm kiếm bất động sản thông minh
-- 📱 Giao diện responsive, thân thiện mobile
-- 🔍 Bộ lọc tìm kiếm nâng cao
-- 📰 Tin tức thị trường cập nhật
-- 💬 Hệ thống liên hệ trực tiếp
-- ⭐ Hiển thị BĐS nổi bật
+- 🏠 Smart property search
+- 📱 Fully responsive and mobile-friendly interface
+- 🔍 Advanced filtering system
+- 📰 Up-to-date real estate market news
+- 💬 Direct contact system
+- ⭐ Featured property highlights
 
-## 🛠️ Công nghệ sử dụng
+## 🛠️ Technologies Used
 
 - **Frontend**: React.js
-- **Styling**: Tailwind CSS
-- **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Inter)
+- **Styling**: Tailwind CSS, PostCSS, Autoprefixer
+- **UI Animations**: Framer Motion
+- **Carousel/Sliders**: Swiper, React Multi Carousel
+- **Icons**: React Icons, React Bootstrap Icons, Heroicons
+- **Routing**: React Router DOM
+- **Form & Validation**: Ajv, Ajv Keywords
+- **Testing**: @testing-library/react, @testing-library/user-event, @testing-library/jest-dom
+- **Build Tools**: React Scripts
+- **Deployment**: gh-pages
 
-## 📦 Cài đặt và chạy
+## 📦 Installation & Running
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/YOUR_USERNAME/real-estate-pro.git
 
-# Di chuyển vào thư mục dự án
+# Navigate to the project directory
 cd real-estate-pro
 
-# Cài đặt dependencies
+# Install dependencies
 npm install
 
-# Chạy development server
+# Start development server
 npm start
+
 
 🌐 Demo
 
-Truy cập: http://localhost:3000
+Visit at: http://localhost:3000
 
 📝 License
-
-MIT License - xem file
-LICENSE
- để biết thêm chi tiết.
+MIT License – see the LICENSE file for details.
 
 👨‍💻 Tác giả
 
-Được phát triển bởi [QUOCANH-VANHUY-GIATHINH]
+👨‍💻 Authors
+Developed by PHAMQUOCANH - TRANVANHUY - LEPHUOCGIATHINH
 ```

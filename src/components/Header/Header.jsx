@@ -10,7 +10,7 @@ const Header = ({ goToSection }) => {
 
   // Style nút màu đen + ánh sao
   const navBtnStyle =
-    "relative px-4 py-2 rounded-lg font-bold bg-white text-red-600 overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:text-yellow-400 " +
+    "relative px-3 py-2 rounded-lg font-bold bg-white text-red-600 overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:text-yellow-400 " +
     "before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full " +
     "before:bg-[radial-gradient(red,transparent_20%)] before:bg-[length:3px_3px] before:opacity-30 before:animate-twinkle";
 
@@ -29,7 +29,7 @@ const Header = ({ goToSection }) => {
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden lg:flex flex-1 justify-center space-x-4 header-nav">
+            <nav className="hidden lg:flex flex-1 justify-center flex-wrap space-x-4 header-nav">
               <button
                 onClick={() => goToSection("hero")}
                 className={navBtnStyle}
@@ -65,6 +65,12 @@ const Header = ({ goToSection }) => {
                 className={navBtnStyle}
               >
                 Contact Us
+              </button>
+              <button
+                onClick={() => goToSection("feedback")}
+                className={navBtnStyle}
+              >
+                Feedback
               </button>
             </nav>
 
@@ -118,6 +124,12 @@ const Header = ({ goToSection }) => {
               className={`${navBtnStyle} w-full`}
             >
               Contact
+            </button>
+            <button
+              onClick={() => goToSection("feedback")}
+              className={`${navBtnStyle} w-full`}
+            >
+              Feedback
             </button>
           </div>
         </div>

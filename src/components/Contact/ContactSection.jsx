@@ -35,7 +35,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h3 className="text-3xl font-bold pb-2 mb-6 hover:scale-105 transition-transform text-red-600 border-b-4 border-red-300">
           Contact Us
         </h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
