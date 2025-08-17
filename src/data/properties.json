@@ -641,22 +641,22 @@
   },
   {
     "id": 25,
-    "title": "Villa in Ninh Kieu",
+    "title": "Villa in Thu Duc",
     "price": 3924321288,
-    "location": "Ninh Kieu, Can Tho",
+    "location": "Thu Duc, Ho Chi Minh City",
     "category": "villa",
     "type": "buy",
-    "bedrooms": 1,
+    "bedrooms": 4,
     "bathrooms": 4,
     "area": 181,
     "furnished": "unfurnished",
-    "description": "Villa in Ninh Kieu, Can Tho, area 181m², fully equipped.",
-    "image": "https://lh3.googleusercontent.com/p/AF1QipOesESCv--2RcIfNhzFCLW-Tk1OeiIASgNYCcqT=w253-h142-k-no",
+    "description": "Villa in Thu Duc,Ho Chi Minh City, area 181m², fully equipped.",
+    "image": "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZmRlMDIyMC00OTg5LTQ3YTEtOGQxNS1iNzgzN2JkNDI1NGIvaG9tZS0xLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
     "images": [
-      "https://lh3.googleusercontent.com/p/AF1QipOJ_2K_K8FnIj8q94rxqkYFQaBpTgNIP-z_DnnP=w253-h189-k-no",
-      "https://lh3.googleusercontent.com/p/AF1QipNIrzr_THv6Bka39ouuy7ClcZw6Bqm2Ap9Q936N=w253-h189-k-no",
-      "https://lh3.googleusercontent.com/p/AF1QipMaKE0IH3de3MryAmX906KBRNgyYj3DC2pvVdfG=w253-h449-k-no",
-      "https://lh3.googleusercontent.com/p/AF1QipOcfI59l-pEViLOJ1WqTUCj9lLvMwOKLD7KrAtK=w253-h337-k-no"
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZmRlMDIyMC00OTg5LTQ3YTEtOGQxNS1iNzgzN2JkNDI1NGIvaG9tZS0yLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZmRlMDIyMC00OTg5LTQ3YTEtOGQxNS1iNzgzN2JkNDI1NGIvaG9tZS0zLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZmRlMDIyMC00OTg5LTQ3YTEtOGQxNS1iNzgzN2JkNDI1NGIvaG9tZS00LmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
+      "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZmRlMDIyMC00OTg5LTQ3YTEtOGQxNS1iNzgzN2JkNDI1NGIvaG9tZS01LmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19"
     ],
 
     "agent": "Lê Thị Hồng",
@@ -2038,7 +2038,7 @@
     "area": 103,
     "furnished": "unfurnished",
     "description": "Apartment in Le Chan, Hai Phong, area 103m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzdmZWJjMmEyLWViOTEtNGIwOC1iZmYzLWFhNmJlOWM3ZmRmZS9hMDdjNGI2NC01MjBjLTRjNmYtYWRkZS0zZmI5MDc1MzdlZGQuanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
     "images": [
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzdmZWJjMmEyLWViOTEtNGIwOC1iZmYzLWFhNmJlOWM3ZmRmZS9hMDdjNGI2NC01MjBjLTRjNmYtYWRkZS0zZmI5MDc1MzdlZGQuanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzdmZWJjMmEyLWViOTEtNGIwOC1iZmYzLWFhNmJlOWM3ZmRmZS81ZmE2ZDJiNC1lYmQ3LTRmNWMtOGM2YS1lOTBlMDU3ZTA3YTguanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
@@ -2254,7 +2254,7 @@
     "area": 261,
     "furnished": "furnished",
     "description": "Villa in District 2, Ho Chi Minh City, area 261m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZTgxZGIwZC1hNzRiLTRhZDgtYjZiMi1iMTk0YWU2OWZlMDUvaG9tZS0zLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
     "images": [
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZTgxZGIwZC1hNzRiLTRhZDgtYjZiMi1iMTk0YWU2OWZlMDUvaG9tZS0zLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9iZTgxZGIwZC1hNzRiLTRhZDgtYjZiMi1iMTk0YWU2OWZlMDUvaG9tZS00LmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
