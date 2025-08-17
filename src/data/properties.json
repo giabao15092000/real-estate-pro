@@ -226,7 +226,7 @@
     "area": 296,
     "furnished": "furnished",
     "description": "Townhouse in Binh Thanh, Ho Chi Minh City, area 296m², fully equipped.",
-    "image": "eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvODI0MTEzODIxNWRmNmY5ZTBkYWI4MC5qcGciLCJicmFuZCI6ImRvdHByb3BlcnR5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjExNzAsImhlaWdodCI6NzgwLCJmaXQiOiJjb3ZlciJ9fX0",
+    "image": "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvMTUzMzYwMjA1ZGY2ZjllMzBiNzIwLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6MTE3MCwiaGVpZ2h0Ijo3ODAsImZpdCI6ImNvdmVyIn19fQ==",
     "images": [
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvMTUzMzYwMjA1ZGY2ZjllMzBiNzIwLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6MTE3MCwiaGVpZ2h0Ijo3ODAsImZpdCI6ImNvdmVyIn19fQ==",
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci80YWExZDBhNi1iMjMyLTQxYzUtODdjZS1kYjkxMmZiZTNiZDAvNDE2Nzc5NTQ1NWRmNmY5ZTQzMzcxOC5qcGciLCJicmFuZCI6ImRvdHByb3BlcnR5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsLCJyZXNpemUiOnsid2lkdGgiOjExNzAsImhlaWdodCI6NzgwLCJmaXQiOiJjb3ZlciJ9fX0=",
@@ -1735,7 +1735,7 @@
     "area": 251,
     "furnished": "partly furnished",
     "description": "Townhouse in District 2, Ho Chi Minh City, area 251m², fully equipped.",
-    "image": "https://cdn.houseviet.vn/images/thumbnails/images/thiet-ke-nha/nha-cap-4-3-phong-ngu-1-phong-tho-5x20m-2-850x637.jpg",
+    "image": "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci84ZGUwMzhjNS01N2FmLTRhYjQtODI0Yy1iNGZhOTEyZmQxMzkvaG9tZS0xLmpwZyIsImJyYW5kIjoiZG90cHJvcGVydHkiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDkwLCJoZWlnaHQiOjMyNSwiZml0IjoiY292ZXIifX19",
     "images": [
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTBkOGIyLTA3NGYtNzc3Ni04OWRkLTY2MDc5ODQyOWZkYi8wMTkwZDhiMi0xNWZhLTcxNDctYTE2ZS03Mjk0OTMwYzFmNDEuanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
       "https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTBkOGIyLTA3NGYtNzc3Ni04OWRkLTY2MDc5ODQyOWZkYi8wMTkwZDhiMi0xNjE1LTcxZTktOWJhMy01MjI2NGJjYmVjMjcuanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=",
