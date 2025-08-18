@@ -18,13 +18,15 @@ export default function TopViews() {
         {topViews.map((item) => (
           <li key={item.id} className="flex items-center mb-3">
             <img
-              src={process.env.PUBLIC_URL + '/' +item.image}
+              src={process.env.PUBLIC_URL + "/image/" + item.image}
               alt={item.title}
               className="w-16 h-16 object-cover rounded-md mr-3"
             />
             <div>
               <h3 className="text-sm font-semibold">{item.title}</h3>
-              <p className="text-xs text-gray-500 text-right">{item.views} views</p>
+              <p className="text-xs text-gray-500 text-right">
+                {item.views} views
+              </p>
             </div>
           </li>
         ))}
