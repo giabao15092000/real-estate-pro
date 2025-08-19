@@ -76,7 +76,7 @@ const Header = ({ goToSection }) => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden text-white hover:text-yellow-300 transition"
+              className="lg:hidden text-red-600 hover:text-yellow-300 transition"
               onClick={toggleMobileMenu}
             >
               <i className="fas fa-bars text-xl"></i>

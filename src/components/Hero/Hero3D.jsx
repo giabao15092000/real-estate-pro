@@ -40,19 +40,21 @@ const Hero3D = () => {
     <>
       <section
         id="hero"
-        className="relative h-[60vh] md:h-[70vh] bg-cover bg-center"
+        className="relative h-[65vh] md:h-[75vh] bg-cover bg-center pt-24 "
         style={{
           backgroundImage: `url(${backgrounds[bgIndex]})`,
           filter: "brightness(1.2)", // tăng 20% độ sáng
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30" />
-        <div className="absolute inset-0 flex items-end justify-center pb-4 px-4">
-          <PropertySearchBar
-            properties={propertiesData}
-            onSearch={setFilteredData}
-            onReset={() => setResultsCount(0)} // thêm hàm reset
-          />
+        <div className="relative flex justify-center px-2 sm:px-4 mt-20 sm:mt-28">
+          <div className="w-full max-w-6xl px-2 sm:px-4">
+            <PropertySearchBar
+              properties={propertiesData}
+              onSearch={setFilteredData}
+              onReset={() => setResultsCount(0)} // thêm hàm reset
+            />
+          </div>
         </div>
       </section>
 

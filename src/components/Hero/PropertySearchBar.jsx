@@ -146,27 +146,27 @@ const PropertySearchBar = ({ properties, onSearch }) => {
 
   return (
     <div
-      className="p-6 rounded-xl shadow-2xl border border-gray-700 w-full max-w-7xl mx-auto"
+      className="relative z-10 mt-6 p-6 rounded-xl shadow-2xl border border-gray-700 w-full max-w-7xl mx-auto"
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.6)",
         color: "#fff",
       }}
     >
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
         <input
           type="text"
           name="search"
           value={filters.search}
           onChange={handleChange}
           placeholder="Search by title, location, keywords..."
-          className="p-2 rounded-lg w-60 bg-white border border-gray-600 text-black"
+          className="p-2 rounded-lg w-full sm:w-60 bg-white border border-gray-600 text-black"
         />
 
         <select
           name="area"
           value={filters.area}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Area</option>
           {areas.map((a) => (
@@ -180,7 +180,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="price"
           value={filters.price}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Price</option>
           {prices.map((p) => (
@@ -194,7 +194,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="location"
           value={filters.location}
           onChange={handleChange}
-          className="p-2 rounded-lg w-52 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-52 bg-white border text-black"
         >
           <option value="">Location</option>
           {locations.map((l) => (
@@ -208,7 +208,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="category"
           value={filters.category}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Category</option>
           {categories.map((c) => (
@@ -222,7 +222,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="type"
           value={filters.type}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Type</option>
           {types.map((t) => (
@@ -236,7 +236,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="bedrooms"
           value={filters.bedrooms}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Bedrooms</option>
           {bedroomsList.map((b) => (
@@ -250,7 +250,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="bathrooms"
           value={filters.bathrooms}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Bathrooms</option>
           {bathroomsList.map((b) => (
@@ -278,7 +278,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="sort"
           value={filters.sort}
           onChange={handleChange}
-          className="p-2 rounded-lg w-40 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-40 bg-white border text-black"
         >
           <option value="">Sort By</option>
           <option value="priceLowHigh">Price: Low → High</option>
@@ -306,7 +306,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
         ))}
         <button
           onClick={handleReset}
-          className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+          className="mt-4 px-4 py-2 bg-red-500 text-white rounded w-full sm:w-auto"
         >
           Reset
         </button>

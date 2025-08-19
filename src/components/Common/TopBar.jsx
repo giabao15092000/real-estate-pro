@@ -13,7 +13,7 @@ const TopBar = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-red-600 via-pink-500 to-orange-500 text-white py-2 text-sm shadow-md">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           {/* Left Info */}
           <div className="flex items-center space-x-4">
             <span className="flex items-center">
@@ -27,7 +27,7 @@ const TopBar = () => {
           </div>
 
           {/* Right Buttons */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 mt-2 sm:mt-0">
             <button
               onClick={() => openModal("login")}
               className="bg-white text-red-600 px-3 py-1 rounded-lg font-semibold hover:bg-red-100 transition-all duration-300 shadow hover:shadow-lg"
@@ -36,7 +36,7 @@ const TopBar = () => {
             </button>
             <button
               onClick={() => openModal("register")}
-              className="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300 shadow hover:shadow-lg"
+              className="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg font-semibold hover:bg-yellow-300 transition-all duration-300 shadow hover:shadow-lg text-xs sm:text-sm"
             >
               <i className="fas fa-user-plus mr-1"></i> Sign up
             </button>
