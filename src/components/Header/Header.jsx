@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "./Header.css";
+import MobileMenu from "./MobileMenu";
 
 const Header = ({ goToSection }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   // Style nút màu đen + ánh sao
@@ -85,55 +89,13 @@ const Header = ({ goToSection }) => {
         </div>
       </header>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="bg-black shadow-lg lg:hidden mobile-menu">
-          <div className="px-4 py-4 space-y-3">
-            <button
-              onClick={() => goToSection("hero")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Home
-            </button>
-            <button
-              onClick={() => goToSection("featured")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Featured Properties
-            </button>
-            <button
-              onClick={() => goToSection("for-sale")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Properties for Sale
-            </button>
-            <button
-              onClick={() => goToSection("for-rent")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Properties for Rent
-            </button>
-            <button
-              onClick={() => goToSection("news")}
-              className={`${navBtnStyle} w-full`}
-            >
-              News
-            </button>
-            <button
-              onClick={() => goToSection("contact")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Contact
-            </button>
-            <button
-              onClick={() => goToSection("feedback")}
-              className={`${navBtnStyle} w-full`}
-            >
-              Feedback
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Mobile Menu Component */}
+      <MobileMenu
+        goToSection={goToSection}
+        isOpen={isMobileMenuOpen}
+        navBtnStyle={navBtnStyle}
+        closeMenu={closeMenu}
+      />
     </>
   );
 };

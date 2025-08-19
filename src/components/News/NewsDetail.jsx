@@ -15,7 +15,7 @@ export default function NewsDetail() {
   return (
     <div className="container mx-auto px-4 py-10 grid grid-cols-10 gap-6">
       {/* Cột chính: Nội dung bài viết */}
-      <div className="col-span-7 col-span-12">
+      <div className="col-span-12 md:col-span-7">
         <Link to="/news" className="text-blue-600">
           ← Back to List
         </Link>
