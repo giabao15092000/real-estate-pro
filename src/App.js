@@ -11,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 import FloatingContact from "./components/Common/FloatingContact";
 import properties from "./data/properties.json";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router, // 🔥 thay vì BrowserRouter
   Routes,
   Route,
   useNavigate,
