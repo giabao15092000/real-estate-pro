@@ -15,13 +15,14 @@ const PropertySearchBar = ({ properties, onSearch }) => {
     amenities: [],
     sort: "",
   });
-  const [hasSearched, setHasSearched] = useState(false); // Thêm state để biết đã search chưa
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFilters((prev) => ({ ...prev, [name]: value }));
-    setHasSearched(true); // Mỗi khi thay đổi input là coi như đã search
+    setHasSearched(true);
   };
+
   const handleReset = () => {
     setFilters({
       search: "",
@@ -36,8 +37,8 @@ const PropertySearchBar = ({ properties, onSearch }) => {
       amenities: [],
       sort: "",
     });
-    setHasSearched(false); // Reset về chưa search
-    onSearch([]); // Gửi mảng rỗng lên cha → Found 0 properties
+    setHasSearched(false);
+    onSearch([]);
   };
 
   const handleAmenitiesChange = (e) => {
@@ -52,10 +53,10 @@ const PropertySearchBar = ({ properties, onSearch }) => {
 
   useEffect(() => {
     if (!hasSearched) {
-      onSearch([]); // Lần đầu mở trang trả về 0 kết quả
+      onSearch([]);
       return;
     }
-    // Nếu đã search, lọc dữ liệu
+
     let filtered = [...properties];
 
     if (filters.search) {
@@ -152,16 +153,18 @@ const PropertySearchBar = ({ properties, onSearch }) => {
         color: "#fff",
       }}
     >
-      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center">
-        <input
-          type="text"
-          name="search"
-          value={filters.search}
-          onChange={handleChange}
-          placeholder="Search by title, location, keywords..."
-          className="p-2 rounded-lg w-full sm:w-60 bg-white border border-gray-600 text-black"
-        />
+      {/* Search input */}
+      <input
+        type="text"
+        name="search"
+        value={filters.search}
+        onChange={handleChange}
+        placeholder="Search by title, location, keywords..."
+        className="p-2 rounded-lg w-full mb-4 bg-white border border-gray-600 text-black"
+      />
 
+      {/* Filters: grid cho mobile, giữ nguyên flex cho desktop */}
+      <div className="grid grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center">
         <select
           name="area"
           value={filters.area}
@@ -264,7 +267,7 @@ const PropertySearchBar = ({ properties, onSearch }) => {
           name="furnished"
           value={filters.furnished}
           onChange={handleChange}
-          className="p-2 rounded-lg w-48 bg-white border text-black"
+          className="p-2 rounded-lg w-full sm:w-48 bg-white border text-black"
         >
           <option value="">Furnishing</option>
           {furnishedList.map((f) => (
@@ -288,7 +291,8 @@ const PropertySearchBar = ({ properties, onSearch }) => {
         </select>
       </div>
 
-      <div className="flex flex-wrap gap-3 mt-4">
+      {/* Amenities grid (mobile 2 cột, desktop flex-wrap giữ nguyên) */}
+      <div className="grid grid-cols-2 gap-3 mt-6 sm:flex sm:flex-wrap">
         {amenitiesList.map((a) => (
           <label
             key={a}
@@ -304,9 +308,13 @@ const PropertySearchBar = ({ properties, onSearch }) => {
             <span className="text-white">{a}</span>
           </label>
         ))}
+      </div>
+
+      {/* Reset button */}
+      <div className="mt-6 text-center">
         <button
           onClick={handleReset}
-          className="mt-4 px-4 py-2 bg-red-500 text-white rounded w-full sm:w-auto"
+          className="px-6 py-2 bg-red-500 text-white rounded-lg w-full sm:w-auto"
         >
           Reset
         </button>
