@@ -22,7 +22,7 @@ export default function NewsDetail() {
         <h1 className="text-4xl font-bold mt-4">{news.title}</h1>
         <p className="text-gray-500 mt-2">{news.date}</p>
         <img
-          src={"/image/" + news.image}
+          src={`/image/${news.image}`}
           alt={news.title}
           className="w-full max-h-96 object-cover mt-4"
         />
@@ -46,7 +46,7 @@ export default function NewsDetail() {
             {hotNews.slice(0, 7).map((item, index) => (
               <li key={index} className="flex gap-3">
                 <img
-                  src={process.env.PUBLIC_URL + "/image/" + item.image}
+                  src={`/image/${item.image}`}
                   alt={item.title}
                   className="w-20 h-14 object-cover rounded"
                 />
