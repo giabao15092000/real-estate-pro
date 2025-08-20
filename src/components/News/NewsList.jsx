@@ -14,7 +14,7 @@ export default function NewsList() {
             >
               <Link to={`/news/${item.id}`} className="block">
                 <img
-                  src={`/image/${item.image}`}
+                  src={`image/${item.image}`}
                   alt={item.title}
                   className="w-full h-48 object-cover"
                 />

@@ -18,7 +18,7 @@ export default function TopViews() {
         {topViews.map((item) => (
           <li key={item.id} className="flex items-center mb-3">
             <img
-              src={`/image/${item.image}`}
+              src={`image/${item.image}`}
               alt={item.title}
               className="w-16 h-16 object-cover rounded-md mr-3"
             />
