@@ -34,7 +34,7 @@ const NewsSection = () => {
               <article className="bg-white rounded-lg shadow-sm overflow-hidden group">
                 <div className="relative">
                   <img
-                    src={`image/${featuredNews.image}`}
+                    src={`/image/${featuredNews.image}`}
                     alt={featuredNews.title}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -70,7 +70,7 @@ const NewsSection = () => {
               >
                 <div className="flex">
                   <img
-                    src={`image/${news.image}`}
+                    src={`/image/${news.image}`}
                     alt={news.title}
                     className="w-24 h-20 object-cover flex-shrink-0"
                   />
@@ -103,7 +103,7 @@ const NewsSection = () => {
               <article key={news.id} className="group">
                 <div className="relative mb-3">
                   <img
-                    src={`image/${news.image}`}
+                    src={`/image/${news.image}`}
                     alt={news.title}
                     className="w-full h-32 object-cover rounded group-hover:opacity-90 transition-opacity"
                   />
